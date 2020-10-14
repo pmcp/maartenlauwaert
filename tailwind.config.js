@@ -1,7 +1,6 @@
 // const colors = require('@tailwindcss/ui/colors')
 const defaultTheme = require('tailwindcss/defaultTheme')
 
-
 const round = (num) =>
   num
     .toFixed(7)

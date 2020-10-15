@@ -33,7 +33,6 @@ export default function (Vue, { router, head, isClient }) {
 
   // Scrollactive library: https://github.com/eddiemf/vue-scrollactive
   Vue.use(VueScrollactive);
-  
-  document.querySelector('#loader').style.display = 'none';
+
 }
 

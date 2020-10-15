@@ -1,5 +1,5 @@
 <template>
-  <transition
+  <transition-group
     enter-active-class="transition ease-in duration-100"
     leave-active-class="transition ease-in duration-100"
     enter-class="opacity-0 scale-70"
@@ -7,7 +7,7 @@
     leave-class="opacity-100 scale-100"
     leave-to-class="opacity-0 scale-70"
   >
-
+<!-- 
     <div
       v-if="infoId === null"
       key="noInfo"
@@ -70,9 +70,9 @@
         </div>
       </a>
 
-    </div>
+    </div> -->
 
-  </transition>
+  </transition-group>
 </template>
 
 <script>

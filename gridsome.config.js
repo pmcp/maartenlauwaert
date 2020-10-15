@@ -16,12 +16,26 @@ if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss(require(
 
 module.exports = {
   siteName: 'Maarten Lauwaert',
-  plugins: [],
+  plugins: [{
+    use: '@gridsome/source-filesystem',
+    options: {
+      path: 'content/info/*.md',
+      typeName: 'Info',
+      remark: {
+        // remark options
+      }
+    }
+  }],
+  transformers: {
+    remark: {
+      // global remark options
+    }
+  },
   css: {
     loaderOptions: {
-        postcss: {
-            plugins: postcssPlugins,
-        },
+      postcss: {
+        plugins: postcssPlugins,
+      },
     }
-  }  
+  }
 }

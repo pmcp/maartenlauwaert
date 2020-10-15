@@ -1,6 +1,6 @@
 <template>
 <div class="container mx-auto m-15 relative">
-  <h2 class="text-3xl font-bold text-gray-800 tracking-tight pb-7 capitalize ">How I work</h2>
+  <h2 class="text-3xl font-bold text-gray-800 tracking-tight pb-7 capitalize">How I work</h2>
   <div class="grid grid-cols-6 gap-8 ">
     <div class="col-span-3">      
       <div class="relative pb-8 pt-6" v-for="i in 4" :key="i">

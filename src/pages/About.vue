@@ -4,7 +4,7 @@
       class="container mx-auto pb-8"
       v-scroll="handleScroll"
     >
-
+    
       <h1 class="mt-2 mb-8 text-6xl leading-10 font-extrabold tracking-tight text-gray-900 sm:text-5xl sm:leading-tight">A Bike Renting Platform For Schools </h1>
     </div>
     <div class="container mx-auto flex flex-row mb-8 ">
@@ -58,7 +58,8 @@
           class="prose prose-base  text-gray-500 col-start-2 col-end-12"
         >
             <div v-for="edge in $page.info.edges" :key="edge.node.id">
-              <div v-html="edge.node.content"></div>
+               <div v-html="edge.node.content"></div>
+              
             </div>
           
           <h2>The brief</h2>
@@ -263,22 +264,10 @@
 </template>
 
 
-<page-query>
-  query {
-    info: allInfo {
-      edges {
-        node {
-          id
-          title
-          content
-        }
-      }
-    }
-  }
-</page-query>
 
 <script>
 import sideInfo from '~/components/sideInfo.vue'
+
 export default {
   metaInfo: {
     title: "About Me",
@@ -292,8 +281,7 @@ export default {
     };
   },
   components: {
-    sideInfo
-  },
+    sideInfo  },
   methods: {
     handleScroll: function (evt, el) {
       if (this.infoId === null) {

@@ -4,7 +4,9 @@ lang: en-US
 ---
 
 # Markdown: Syntax
-
+<open-side-info info-id="provelo" type="externalLink" url="https://www.provelo.org/en">
+Pro Velo
+</open-side-info>
 - [Markdown: Syntax](#markdown-syntax)
   - [Overview](#overview)
     - [Philosophy](#philosophy)
@@ -30,6 +32,7 @@ can [see the source for it by adding '.text' to the URL](/projects/markdown/synt
 ## Overview
 
 ### Philosophy
+
 
 Markdown is intended to be as easy-to-read and easy-to-write as is feasible.
 

@@ -1,15 +1,20 @@
 <template>
-  <Layout>
+  
+    <Layout>
     <div
       class="container mx-auto pb-8"
       v-scroll="handleScroll"
     >
-
-      <h1 class="mt-2 mb-8 text-6xl leading-10 font-extrabold tracking-tight text-gray-900 sm:text-5xl sm:leading-tight">A Bike Renting Platform For Schools </h1>
+    
+    
+    
+      <h1 v-html="$page.article.title" class="mt-2 mb-8 text-6xl leading-10 font-extrabold tracking-tight text-gray-900 sm:text-5xl sm:leading-tight">A Bike Renting Platform For Schools </h1>
     </div>
     <div class="container mx-auto flex flex-row mb-8 ">
+      
       <div class="w-1/5">
         <div class="sticky top-5 ">
+          
           <scrollactive active-class="text-gray-800">
             <ul class="sticky top-0 text-sm leading-loose text-gray-400 capitalize pb-8">
               <h3 class="text-xl font-bold text-gray-400 tracking-tight">
@@ -45,89 +50,26 @@
             <h3 class="text-xl font-bold text-gray-400 tracking-tight ">
               Side info & Glossary
             </h3>
-
-            <transition
-              enter-active-class="transition ease-in duration-100"
-              leave-active-class="transition ease-in duration-100"
-              enter-class="opacity-0 scale-70"
-              enter-to-class="opacity-100 scale-100"
-              leave-class="opacity-100 scale-100"
-              leave-to-class="opacity-0 scale-70"
-            >
-              <div
-                v-if="infoId === null"
-                key="noInfo"
-              >
-                <p class="mt-4 mx-auto text-sm leading-normal shadow-inner px-2 py-6  text-gray-300 italic absolute">
-                  If you hover over an underlined word, the explanation will appear here.
-                </p>
-              </div>
-
-              <div
-                id="id"
-                v-if="infoId === 'testId'"
-              >
-                <p class="mx-auto text-base leading-7 text-gray-400 italic">
-                  Definition of this term...
-                </p>
-              </div>
-              <div
-                id="id"
-                v-if="infoId === 'provelo'"
-                @mouseover="hoveringInfo = true"
-                @mouseleave="hoveringInfo = false"
-              >
-                <a
-                  href="https://www.provelo.org/en"
-                  target="_blank"
-                >
-                  <div class="max-w-sm rounded overflow-hidden shadow-inner p-1 leading-snug group bg-white">
-                    <g-image
-                      class="w-full group-hover:bg-gray-800 hover:shadowtransition duration-500 ease-in-out"
-                      src="~/images/links/provelo.png"
-                      alt="A screenshot of the website of the organisation Pro Velo"
-                      width="200"
-                    />
-
-                    <div class="px-1 py-4">
-                      <div class="font-bold text-gray-400 text-sm mb-2 group-hover:text-gray-800 transition duration-500 ease-in-out ">Pro Velo</div>
-                      <p class="text-gray-400 text-sm group-hover:text-gray-800 transition duration-500 ease-in-out">
-                        Pro Velo promotes bicycling in Brussels.
-                      </p>
-
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        class=" w-4 h-4  inline text-gray-400 pr-1 group-hover:text-gray-800 transition duration-500 ease-in-out"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                        />
-                      </svg>
-                      <span class="text-gray-400 text-sm underline group-hover:text-gray-800 transition duration-500 ease-in-out" >Visit site</span>
-
-                    </div>
-
-                  </div>
-                </a>
-
-              </div>
-
-            </transition>
+            <side-info :infoId="infoId"></side-info>
           </div>
         </div>
       </div>
 
       <div class="flex-grow container mx-auto grid grid-cols-12 gap-8 pl-8 ">
+        
+
         <div
           id="brief"
           class="prose prose-base  text-gray-500 col-start-2 col-end-12"
         >
+        
+        
+        
+        <VueRemarkContent />
+
+
+
+
           <h2>The brief</h2>
           <p>When taking their students on excursion, the primary and secondary schools in the city of Brussels regularly have a shortage of bikes. This makes organizing an outing cumbersome. Not all city kids have bikes, because they are too expensive, or because they get stolen too often, etc.</p>
           <p><button
@@ -327,13 +269,27 @@
     </div>
 
   </Layout>
+
 </template>
 
+<page-query>
+query ($id: ID!) {
+  article(id: $id) {
+    title
+    content
+  }
+}
+</page-query>
+
+
 <script>
-// import VueScrollactive from 'vue-scrollactive';
+import sideInfo from '~/components/sideInfo.vue'
+
+import { EventBus } from '~/eventBus.js';
+
 export default {
   metaInfo: {
-    title: "About us",
+    title: "Article", // TODO: change name
   },
   data() {
     return {
@@ -343,7 +299,14 @@ export default {
       scrollTreshold: 150,
     };
   },
+  components: {
+    sideInfo
+  },
   methods: {
+    // setInfoId(id){
+    //   console.log(id)
+    //   this.infoId = id;
+    // },
     handleScroll: function (evt, el) {
       if (this.infoId === null) {
         return;
@@ -355,5 +318,11 @@ export default {
       return;
     },
   },
+  created (){
+    EventBus.$on('setInfoId', (data) => {
+      console.log('here', data)
+      this.infoId = data
+    })
+  }
 };
 </script>

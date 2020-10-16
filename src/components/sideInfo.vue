@@ -1,13 +1,18 @@
 <template>
-  <transition-group
+  <!-- <transition-group
     enter-active-class="transition ease-in duration-100"
     leave-active-class="transition ease-in duration-100"
     enter-class="opacity-0 scale-70"
     enter-to-class="opacity-100 scale-100"
     leave-class="opacity-100 scale-100"
     leave-to-class="opacity-0 scale-70"
-  >
-<!-- 
+  > -->
+<div>
+
+  <!-- {{ $static.links.edges }} -->
+
+  {{ active }}
+
     <div
       v-if="infoId === null"
       key="noInfo"
@@ -16,7 +21,7 @@
         If you hover over an underlined word, the explanation will appear here.
       </p>
     </div>
-    <info-link></info-link>
+    <!-- <info-link></info-link> -->
     <div
       id="id"
       v-if="infoId === 'testId'"
@@ -38,7 +43,7 @@
         <div class="max-w-sm rounded overflow-hidden shadow-inner p-1 leading-snug group bg-white">
           <g-image
             class="w-full group-hover:bg-gray-800 hover:shadowtransition duration-500 ease-in-out"
-            src="~/images/velotheek/link_provelo.png"
+            src="~/images/links/provelo.png"
             alt="A screenshot of the website of the organisation Pro Velo"
             width="200"
           />
@@ -70,10 +75,24 @@
         </div>
       </a>
 
-    </div> -->
-
-  </transition-group>
+    </div>
+</div>
+  <!-- </transition-group> -->
 </template>
+
+<static-query>
+  query {
+    links: allLink {
+      edges {
+        node {
+          id
+          name
+          content
+        }
+      }	
+    }
+  }
+</static-query>
 
 <script>
 export default {
@@ -82,6 +101,14 @@ export default {
       type: String,
       default: null 
     },
-  } 
+  },
+  computed: {
+    active() {
+      if(this.infoId === null) return;
+      const active = this.$static.links.edges.filter(link => this.infoId === link.node.id)
+      return active[0]
+
+    }
+  }, 
 };
 </script>

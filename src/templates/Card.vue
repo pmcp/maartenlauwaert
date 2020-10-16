@@ -13,11 +13,15 @@
 
 <page-query>
 query ($id: ID!) {
-  link(id: $id) {
+  card(id: $id) {
+    id
     name
     url
+    cat
     type
     cover
+    descr
+    name
   }
 }
 </page-query>

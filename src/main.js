@@ -10,7 +10,7 @@ import VueScrollactive from 'vue-scrollactive';
 
 // Global Components
 // import testComp from '~/components/testComp.vue'
-import openSideInfo from '~/components/openSideInfo.vue'
+// import cardInline from '~/components/cardInline.vue'
 
 import DefaultLayout from '~/layouts/Default.vue'
 
@@ -20,7 +20,7 @@ export default function (Vue, { router, head, isClient }) {
 
   // Global components
   // Vue.component('test-comp', testComp),
-  Vue.component('open-side-info', openSideInfo),
+  // Vue.component('cardInline', cardInline),
 
 
 

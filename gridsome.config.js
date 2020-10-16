@@ -23,19 +23,29 @@ module.exports = {
         typeName: 'Article', // Required
         baseDir: './content/articles', // Where .md files are located
         pathPrefix: '/articles', // Add route prefix. Optional
-        template: './src/templates/Article.vue' // Optional
+        template: './src/templates/Article.vue', // Optional
+        refs: {
+          cards: {
+            typeName: 'Card'
+          }
+        }
       }
     },
     {
       use: '@gridsome/vue-remark',
       options: {
-        typeName: 'Link', // Required
-        baseDir: './content/links', // Where .md files are located
-        pathPrefix: '/links', // Add route prefix. Optional
-        template: './src/templates/Link.vue' // Optional
+        typeName: 'Card', // Required
+        baseDir: './content/cards', // Where .md files are located
+        pathPrefix: '/cards', // Add route prefix. Optional
+        template: './src/templates/Card.vue' // Optional
       }
-    }
+    },
   ],
+  // This makes dynamic images work
+  chainWebpack: config => {
+    config.resolve.alias.set('@links', '@/images/links')
+  },
+
   // transformers: {
   //   remark: {
   //     // global remark options

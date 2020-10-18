@@ -28,7 +28,11 @@ module.exports = {
           cards: {
             typeName: 'Card'
           }
-        }
+        },
+        // plugins: ['remark-toc'],
+
+          
+        
       }
     },
     {
@@ -46,11 +50,15 @@ module.exports = {
     config.resolve.alias.set('@links', '@/images/links')
   },
 
-  // transformers: {
-  //   remark: {
-  //     // global remark options
-  //   }
-  // },
+  transformers: {
+    remark: {
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      plugins: [
+        'remark-toc'
+      ]
+    }
+  },
   css: {
     loaderOptions: {
       postcss: {

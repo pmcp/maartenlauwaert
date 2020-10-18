@@ -1,11 +1,10 @@
 ---
-test: Blogging with VuePress
-lang: en-US
+title: 'Velotheek: A Bike Renting Platform For Schools'
 cards:
   - provelo
   - provelo2
-toc: 
 ---
+
 <!-- Get cards for links :: START -->
 import cardInline from '~/components/cardInline.vue'
 import imageInline from '~/components/imageInline.vue'
@@ -28,10 +27,14 @@ import articleGrid from '~/components/articleGrid.vue'
 {{ hoveringInfo  = null}}
 <!-- Get cards for links :: END -->
 <!-- Content :: START -->
-<article-grid start="1" end="13">
+<article-grid :start="1" :end="13">
 
+# test
+## Table of Contents
 ## The brief
 
+
+  
 When taking their students on excursion, the primary and secondary schools in the city of Brussels regularly have a shortage of bikes. This makes organizing an outing cumbersome. Not all city kids have bikes, because they are too expensive, or because they get stolen too often, etc. 
 
 <card-inline :card="$page.article.cards[0]" :card-id="0" :active-id="activeId" :hovering-info="hoveringInfo">Pro Velo</card-inline>, an organization who promotes biking in the city arranged a container full of bikes to be made available for the schools of Saint-Gilles, one of the communes of Brussels. At the same time, another commune also had the same problems, and a comparable solution. Teachers could reserve bikes for one or more days, pick them up, and return them themselves. They called it "Velotheek" (which translates to "bike library").
@@ -87,7 +90,7 @@ Every "persona" gets it's own "jobs to be done", mapping of needs and potential 
     <span slot="caption">Step 1: Research</span>
 </image-inline>
 </article-grid>
-<article-grid start="1" end="9">
+<article-grid :start="1" :end="9">
 <article-meta>
   <span slot="name">Duration</span>
   <span slot="content">1 weeks</span>
@@ -107,7 +110,7 @@ I don't actually know what this exercise is called, but either way, it's a very 
 This very low fidelity prototype gets shared with the the smallest group of stakeholders (in this case just the product owners and one teacher). It's not a real usability test, but will quickly uncover missing basic features or steps in the flow.
 </article-grid>
 
-<article-grid start="9" end="13">
+<article-grid :start="9" :end="13">
 <image-inline>
     <g-image
       slot="image"
@@ -121,7 +124,7 @@ This very low fidelity prototype gets shared with the the smallest group of stak
 </article-grid>
 
 
-<article-grid start="1" end="13">
+<article-grid :start="1" :end="13">
 <image-inline>
     <g-image
       slot="image"
@@ -134,8 +137,8 @@ This very low fidelity prototype gets shared with the the smallest group of stak
 </article-grid>
 
 
-<article-grid start="1" end="13">
-##Step 3: Wireframing
+<article-grid :start="1" :end="13">
+## Step 3: Wireframing
 <image-inline>
     <g-image
       slot="image"
@@ -225,7 +228,7 @@ In this case I designed the flow to reserve bikes for one specific day. The app 
     <span slot="caption">The Trello board for the intake of feedback.</span>
 </image-inline>
 
-## Live beta
+## Step 6: Live beta
 <image-inline>
     <g-image
       slot="image"

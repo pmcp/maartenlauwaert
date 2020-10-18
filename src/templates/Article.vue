@@ -17,30 +17,16 @@
               <h3 class="text-xl font-bold text-gray-400 tracking-tight">
                 In this article
               </h3>
-              <li>
+              <!-- <li v-for="(i,id) in $page.article.toc" :key="id">
+                
                 <a
                   href="#brief"
-                  class="scrollactive-item "
-                >The Brief</a>
-              </li>
-              <li>
-                <a
-                  href="#step1"
-                  class="scrollactive-item"
-                >Step 1: Research</a>
-              </li>
-              <li>
-                <a
-                  href="#step2"
-                  class="scrollactive-item"
-                >Step 2: Decision Tree</a>
-              </li>
-              <li>
-                <a
-                  href="#step3"
-                  class="scrollactive-item"
-                >Step 3: Wireframing</a>
-              </li>
+                  class="scrollactive-item ">
+                  {{ i }}
+                </a>
+              </li> -->
+
+
             </ul>
           </scrollactive>
           <div class="leading-loose">

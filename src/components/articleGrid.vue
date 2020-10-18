@@ -1,5 +1,5 @@
 <template>
-  <div class="prose prose-base text-gray-500"
+  <div class="text-gray-500"
   :class="gridClasses">
     <slot></slot>
   </div>
@@ -10,16 +10,42 @@ export default {
   props: {
     start: {
       type: Number,
-      default: 1
+      default: null
     },
     end: {
       type: Number,
-      default: 13
+      default: 12
+    },
+    span: {
+      type: Number,
+      default: null
+    },
+    prose: {
+      type: Boolean,
+      default: true
     }
+
   },
   computed: {
     gridClasses() {
-      return `col-start-${this.start} col-end-${this.end}`
+      let prose = [];
+      let gridClasses = [];
+      if(this.prose) prose = ['prose', 'prose-base'];
+      if(this.start !== null && this.span === null) {
+        gridClasses = [`col-start-${this.start}`, `col-end-${this.end}`]
+      }
+      if(this.start === null && this.span === null) {
+        gridClasses = [`col-span-12`]
+      }
+      if(this.start === null && this.span === null) {
+        gridClasses = [`col-span-12`]
+      }
+      if(this.span !== null) {
+        gridClasses = [`col-span-${this.span}`]
+      }
+      return [...prose, ...gridClasses];
+
+      
     }
   },
 };

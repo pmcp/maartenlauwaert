@@ -2,7 +2,6 @@
   <figure>
     <slot name="image"></slot>
     <figcaption  v-if="captionPassed" class="flex mt-3 text-sm text-gray-500">
-      <!-- Heroicon name: camera -->
       <svg
         class="flex-none w-5 h-5 mr-2 text-gray-400"
         xmlns="http://www.w3.org/2000/svg"
@@ -23,6 +22,7 @@
 export default {
 computed: {
   captionPassed() {
+    console.log(this.$slots.caption )
     if(this.$slots.caption === undefined) return false
     return true;
   }

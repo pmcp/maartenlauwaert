@@ -21,7 +21,6 @@ query ($id: ID!) {
     type
     cover
     descr
-    name
   }
 }
 </page-query>

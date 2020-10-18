@@ -29,7 +29,7 @@
 
             </ul>
           </scrollactive>
-          <div class="leading-loose">
+          <div class="leading-loose" v-if="$page.article.cards.length > 0">
             <h3 class="text-xl font-bold text-gray-400 tracking-tight ">
               Side info & Glossary
             </h3>

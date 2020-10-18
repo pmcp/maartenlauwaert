@@ -15,7 +15,6 @@
 query ($id: ID!) {
   card(id: $id) {
     id
-    name
     url
     cat
     type

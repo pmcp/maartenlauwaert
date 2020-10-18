@@ -1,12 +1,10 @@
 <template>
-  <button
-    :class="{ ' text-gray-800': isCardActive }"
-    class="underline hover:text-gray-800"
-    @mouseover="setActiveId()"
-  >
-    <slot></slot>
-    <a
-      :href="card.url"
+  <span @mouseover="setActiveCardId(card)" @mouseleave="setActiveCardId(null)" class="text-gray-800">
+    <span class="highlight" :class="{'highlighted': active}">
+      <slot></slot>
+    </span>
+    <a  
+      :href="theCard.url"
       target="_blank"
     >
       <!-- Heroicon name: external-link -->
@@ -15,7 +13,7 @@
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        :class="{ ' text-gray-800': isCardActive }"
+        :class="{ ' text-gray-800': active }"
         class="w-5 h-5 pb-1 inline text-gray-500 hover:text-gray-800"
       >
         <path
@@ -27,41 +25,63 @@
       </svg>
 
     </a>
-  </button>
+  </span>
 </template>
 
-<script>
-export default {
-  props: {
-    activeId: {
-      type: Number,
-      default: null
-    },
-    cardId: {
-      type: Number,
-      default: null
-    },
-    card: {
-      type: Object,
-      default() {
-        return {};
-      },
-    },
-    hoveringInfo: {
-      type: Boolean,
-      default: false
+
+
+<static-query>
+  query {
+    cards: allCard {
+      edges {
+        node {
+          id
+          name
+          url
+          type
+          cover
+        }
+      }	
     }
+  }
+</static-query>
+
+<script>
+import { EventBus } from "~/eventBus.js";
+
+export default {
+  data() {
+    return {
+      active: false,
+    };
+  },
+  props: {
+    card: {
+      type: Number,
+      default: null,
+    },
   },
   computed: {
-    isCardActive() {
-      if(this.activeId === null) return;
-      if(this.activeId === this.cardId && this.hoveringInfo) return true;
-    }
+    theCard() {
+      return this.$static.cards.edges[this.card];
+    },
   },
   methods: {
-    setActiveId() {
-      console.log(`setting active Id on mouseover with id ${this.cardId}`)
-    }
+    setActiveCardId(card) {
+      if(card == null) {
+        this.active = false
+        return;
+      }
+
+      this.active = true;
+      EventBus.$emit("setActiveCardId", this.card);
+    },
+  },
+  created() {
+    EventBus.$on("setActiveCardIdFromSidebar", (data) => {
+      console.log(data, this.active, this.card)
+      this.active = this.card === data;
+    });
   },
 };
 </script>

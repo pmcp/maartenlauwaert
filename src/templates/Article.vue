@@ -33,13 +33,18 @@
             <h3 class="text-xl font-bold text-gray-400 tracking-tight ">
               Side info & Glossary
             </h3>
+            
             <div
-              v-for="card in $page.article.cards"
-              :key="card.id"
+              v-for="(card, id) in $page.article.cards"
+              :key="id"
+              @mouseover="setActiveCard(id)"
+              @mouseleave="setActiveCard(null)"
             >
+
+            <!-- {{id}} - {{ activeCardId}} -->
               <card
-                :content="card"
-                :active="card.id == activeInfoId"
+                :card="card"
+                :active="id == activeCardId"
               ></card>
             </div>
             <!-- <side-info :activeCard="infoId" ></side-info> -->
@@ -104,7 +109,6 @@ query ($id: ID!) {
 // import sideInfo from "~/components/sideInfo.vue";
 import card from "~/components/card.vue";
 import cardInline from "~/components/cardInline.vue";
-
 import { EventBus } from "~/eventBus.js";
 
 export default {
@@ -113,8 +117,8 @@ export default {
   },
   data() {
     return {
-      activeInfoId: null,
-      hoveringInfo: false,
+      activeCardId: null,
+      hoveringCard: false,
       scrollPos: 0,
       scrollTreshold: 150,
     };
@@ -124,25 +128,24 @@ export default {
     cardInline,
   },
   methods: {
-    // setInfoId(id){
-    //   console.log(id)
-    //   this.infoId = id;
-    // },
+    setActiveCard(id){
+      this.activeCardId = id;
+      EventBus.$emit("setActiveCardIdFromSidebar", id);
+    },  
     handleScroll: function (evt, el) {
-      if (this.infoId === null) {
+      if (this.activeCardId === null) {
         return;
       }
       if (window.scrollY > this.scrollPos + this.scrollTreshold) {
-        this.infoId = null;
+        this.activeCardId = null;
         this.scrollPos = window.scrollY;
       }
       return;
     },
   },
   created() {
-    EventBus.$on("setInfoId", (data) => {
-      console.log("here", data);
-      this.infoId = data;
+    EventBus.$on("setActiveCardId", (data) => {
+      this.activeCardId = data;
     });
   },
 };

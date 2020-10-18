@@ -4,6 +4,21 @@
 
 @tailwind utilities;
 
+.highlight {
+  display: inline;
+  background-repeat: no-repeat;
+  transition: all 500ms ease-in-out;
+  background-position: left;
+  background-size: 0% 100%;
+  background-image: linear-gradient(#f6e05e, #f6e05e);
+}
+.highlight:hover {
+  background-size: 100% 100%;
+}
+.highlighted {
+  background-size: 100% 100%;
+}
+
 
 /* FONTS */
 @font-face {

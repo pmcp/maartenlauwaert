@@ -4,9 +4,11 @@
       class="container mx-auto pb-8"
       v-scroll="handleScroll"
     >
+    
       <h1 class="mt-2 mb-8 text-6xl leading-10 font-extrabold tracking-tight text-gray-900 sm:text-5xl sm:leading-tight">A Bike Renting Platform For Schools </h1>
     </div>
     <div class="container mx-auto flex flex-row mb-8 ">
+      
       <div class="w-1/5">
         <div class="sticky top-5 ">
           
@@ -55,6 +57,11 @@
           id="brief"
           class="prose prose-base  text-gray-500 col-start-2 col-end-12"
         >
+            <div v-for="edge in $page.info.edges" :key="edge.node.id">
+               <div v-html="edge.node.content"></div>
+              
+            </div>
+          
           <h2>The brief</h2>
           <p>When taking their students on excursion, the primary and secondary schools in the city of Brussels regularly have a shortage of bikes. This makes organizing an outing cumbersome. Not all city kids have bikes, because they are too expensive, or because they get stolen too often, etc.</p>
           <p><button
@@ -256,11 +263,14 @@
   </Layout>
 </template>
 
+
+
 <script>
 import sideInfo from '~/components/sideInfo.vue'
+
 export default {
   metaInfo: {
-    title: "About us",
+    title: "About Me",
   },
   data() {
     return {
@@ -271,8 +281,7 @@ export default {
     };
   },
   components: {
-    sideInfo
-  },
+    sideInfo  },
   methods: {
     handleScroll: function (evt, el) {
       if (this.infoId === null) {

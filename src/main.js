@@ -8,11 +8,23 @@ require('~/main.css')
 import VueScrollactive from 'vue-scrollactive';
 
 
+// Global Components
+// import testComp from '~/components/testComp.vue'
+// import cardInline from '~/components/cardInline.vue'
+
 import DefaultLayout from '~/layouts/Default.vue'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout),
+
+  // Global components
+  // Vue.component('test-comp', testComp),
+  // Vue.component('cardInline', cardInline),
+
+
+
+
 
   // Scroll Directive (https://vuejs.org/v2/cookbook/creating-custom-scroll-directives.html)
   Vue.directive('scroll', {
@@ -28,6 +40,5 @@ export default function (Vue, { router, head, isClient }) {
 
   // Scrollactive library: https://github.com/eddiemf/vue-scrollactive
   Vue.use(VueScrollactive);
-
+  
 }
-

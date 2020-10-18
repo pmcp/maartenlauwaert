@@ -16,12 +16,54 @@ if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss(require(
 
 module.exports = {
   siteName: 'Maarten Lauwaert',
-  plugins: [],
+  plugins: [
+    {
+      use: '@gridsome/vue-remark',
+      options: {
+        typeName: 'Article', // Required
+        baseDir: './content/articles', // Where .md files are located
+        pathPrefix: '/articles', // Add route prefix. Optional
+        template: './src/templates/Article.vue', // Optional
+        refs: {
+          cards: {
+            typeName: 'Card'
+          }
+        },
+        // plugins: ['remark-toc'],
+
+          
+        
+      }
+    },
+    {
+      use: '@gridsome/vue-remark',
+      options: {
+        typeName: 'Card', // Required
+        baseDir: './content/cards', // Where .md files are located
+        pathPrefix: '/cards', // Add route prefix. Optional
+        template: './src/templates/Card.vue' // Optional
+      }
+    },
+  ],
+  // This makes dynamic images work
+  chainWebpack: config => {
+    config.resolve.alias.set('@links', '@/images/links')
+  },
+
+  transformers: {
+    remark: {
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      plugins: [
+        'remark-toc'
+      ]
+    }
+  },
   css: {
     loaderOptions: {
-        postcss: {
-            plugins: postcssPlugins,
-        },
+      postcss: {
+        plugins: postcssPlugins,
+      },
     }
-  }  
+  }
 }

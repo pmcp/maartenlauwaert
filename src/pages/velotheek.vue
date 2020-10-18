@@ -4,6 +4,7 @@
       class="container mx-auto pb-8"
       v-scroll="handleScroll"
     >
+
       <h1 class="mt-2 mb-8 text-6xl leading-10 font-extrabold tracking-tight text-gray-900 sm:text-5xl sm:leading-tight">A Bike Renting Platform For Schools </h1>
     </div>
     <div class="container mx-auto flex flex-row mb-8 ">
@@ -83,7 +84,7 @@
                   <div class="max-w-sm rounded overflow-hidden shadow-inner p-1 leading-snug group bg-white">
                     <g-image
                       class="w-full group-hover:bg-gray-800 hover:shadowtransition duration-500 ease-in-out"
-                      src="~/images/velotheek/link_provelo.png"
+                      src="~/images/links/provelo.png"
                       alt="A screenshot of the website of the organisation Pro Velo"
                       width="200"
                     />

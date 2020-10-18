@@ -3,8 +3,29 @@ title: 'Velotheek: A Bike Renting Platform For Schools'
 cards:
   - provelo
   - provelo2
-test: 
-  -The brief: the-brief
+toc:
+- name: The Brief
+  id: the-brief 
+- name: 'Step 1: Research'
+  id: step-1-research
+
+- name: 'Step 2: Decision Tree'
+  id: step-2-decision-tree
+
+- name: 'Step 3: Wireframing'
+  id: step-3-wireframing
+
+- name: 'Step 4: Click Prototype'
+  id: step-4-click-prototype
+
+- name: 'Step 5: MVP'
+  id: step-5-mvp
+
+- name: 'Step 6: Live Beta'
+  id: step-6-live-beta
+
+- name: 'Step 7 : Learnings'
+  id: step-7-and-beyond-analyse--lessons-learned
 ---
 
 <!-- Components :: START -->
@@ -119,6 +140,7 @@ This very low fidelity prototype gets shared with the the smallest group of stak
 
 
 <article-grid>
+
 ## Step 3: Wireframing
 <image-inline>
     <g-image
@@ -245,7 +267,7 @@ In this phase real users are using the app, and things will fail. It's important
 
 During this period, I will regularly update the app, introduce new features or kick out existing ones, so the Beta can evolve towards an mature product .
 
-## Step 7 and beyond: Analyse & Lessons learned
+## Step 7 and beyond: Analyse & Lessons Learned
 
 After this phase, I collect all the learnings and together with the data I get from the analytics suite, create a brief for the organization that will create the official version of the tool.
 </article-grid>

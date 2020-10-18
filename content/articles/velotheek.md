@@ -5,13 +5,12 @@ cards:
   - provelo2
 ---
 
-<!-- Get cards for links :: START -->
+<!-- Components :: START -->
 import cardInline from '~/components/cardInline.vue'
 import imageInline from '~/components/imageInline.vue'
 import articleMeta from '~/components/articleMeta.vue'
 import articleGrid from '~/components/articleGrid.vue'
-
-<!-- Get cards for links :: END -->
+<!-- Components :: END -->
 
 <!-- Content :: START -->
 <article-grid>
@@ -20,8 +19,8 @@ import articleGrid from '~/components/articleGrid.vue'
 
 When taking their students on excursion, the primary and secondary schools in the city of Brussels regularly have a shortage of bikes. This makes organizing an outing cumbersome. Not all city kids have bikes, because they are too expensive, or because they get stolen too often, etc. 
 
-<card-inline :card="0">Pro Velo</card-inline>, an organization who promotes biking in the city arranged a container full of bikes to be made available for the schools of Saint-Gilles, one of the communes of Brussels. At the same time, another commune also had the same problems, and a comparable solution. Teachers could reserve bikes for one or more days, pick them up, and return them themselves. They called it "Velotheek" (which translates to "bike library").
-<card-inline :card="1">TEST</card-inline>
+<card-inline :id="0">Pro Velo</card-inline>, an organization who promotes biking in the city arranged a container full of bikes to be made available for the schools of Saint-Gilles, one of the communes of Brussels. At the same time, another commune also had the same problems, and a comparable solution. Teachers could reserve bikes for one or more days, pick them up, and return them themselves. They called it "Velotheek" (which translates to "bike library").
+<card-inline :id="1">TEST</card-inline>
 But both communes realized quickly that the reservations of the bikes would become complicated and time consuming for the people in charge. So they turned to me to come up with a more streamlined process.
 
 ## Step 1: Research

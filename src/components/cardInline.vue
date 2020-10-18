@@ -1,5 +1,5 @@
 <template>
-  <span @mouseover="setActiveCardId(card)" @mouseleave="setActiveCardId(null)" class="text-gray-800">
+  <span @mouseover="setActiveCardId(id)" @mouseleave="setActiveCardId(null)" class="text-gray-800">
     <span class="highlight" :class="{'highlighted': active}">
       <slot></slot>
     </span>
@@ -56,14 +56,14 @@ export default {
     };
   },
   props: {
-    card: {
+    id: {
       type: Number,
       default: null,
     },
   },
   computed: {
     theCard() {
-      return this.$static.cards.edges[this.card];
+      return this.$static.cards.edges[this.id];
     },
   },
   methods: {
@@ -74,13 +74,13 @@ export default {
       }
 
       this.active = true;
-      EventBus.$emit("setActiveCardId", this.card);
+      EventBus.$emit("setActiveCardId", this.id);
     },
   },
   created() {
     EventBus.$on("setActiveCardIdFromSidebar", (data) => {
-      console.log(data, this.active, this.card)
-      this.active = this.card === data;
+      console.log(data, this.active, this.id)
+      this.active = this.id === data;
     });
   },
 };

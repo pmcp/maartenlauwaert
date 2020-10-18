@@ -26,15 +26,12 @@ import articleGrid from '~/components/articleGrid.vue'
 {{ activeId = null}}
 {{ hoveringInfo  = null}}
 <!-- Get cards for links :: END -->
-<!-- Content :: START -->
-<article-grid :start="1" :end="13">
 
-# test
-## Table of Contents
+<!-- Content :: START -->
+<article-grid>
+
 ## The brief
 
-
-  
 When taking their students on excursion, the primary and secondary schools in the city of Brussels regularly have a shortage of bikes. This makes organizing an outing cumbersome. Not all city kids have bikes, because they are too expensive, or because they get stolen too often, etc. 
 
 <card-inline :card="$page.article.cards[0]" :card-id="0" :active-id="activeId" :hovering-info="hoveringInfo">Pro Velo</card-inline>, an organization who promotes biking in the city arranged a container full of bikes to be made available for the schools of Saint-Gilles, one of the communes of Brussels. At the same time, another commune also had the same problems, and a comparable solution. Teachers could reserve bikes for one or more days, pick them up, and return them themselves. They called it "Velotheek" (which translates to "bike library").
@@ -120,11 +117,8 @@ This very low fidelity prototype gets shared with the the smallest group of stak
     />  
     <span slot="caption">Step 1: Research</span>
 </image-inline>
-
 </article-grid>
-
-
-<article-grid :start="1" :end="13">
+<article-grid >
 <image-inline>
     <g-image
       slot="image"
@@ -137,7 +131,7 @@ This very low fidelity prototype gets shared with the the smallest group of stak
 </article-grid>
 
 
-<article-grid :start="1" :end="13">
+<article-grid>
 ## Step 3: Wireframing
 <image-inline>
     <g-image

@@ -21,7 +21,6 @@
       edges {
         node {
           id
-          name
           url
           type
           cover

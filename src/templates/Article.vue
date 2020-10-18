@@ -13,20 +13,18 @@
       <div class="w-1/5">
         <div class="sticky top-5 ">
           <scrollactive active-class="text-gray-800">
-            <ul class="sticky top-0 text-sm leading-loose text-gray-400 capitalize pb-8">
-              <h3 class="text-xl font-bold text-gray-400 tracking-tight">
+            <h3 class="text-xl font-bold text-gray-400 tracking-tight">
                 In this article
               </h3>
-              <!-- <li v-for="(i,id) in $page.article.toc" :key="id">
-                
+            <ul class="sticky top-0 text-sm leading-loose text-gray-400 capitalize pb-8">
+              
+              <li v-for="(i,id) in $page.article.toc" :key="id">
                 <a
-                  href="#brief"
+                  :href="'#'+i.id"
                   class="scrollactive-item ">
-                  {{ i }}
+                  {{ i.name }}
                 </a>
-              </li> -->
-
-
+              </li>
             </ul>
           </scrollactive>
           <div class="leading-loose" v-if="$page.article.cards.length > 0">
@@ -90,6 +88,10 @@ query ($id: ID!) {
   article(id: $id) {
     title
     content
+    toc {
+      name
+      id
+    }
     cards {
       id
       name
@@ -106,7 +108,6 @@ query ($id: ID!) {
 
 
 <script>
-// import sideInfo from "~/components/sideInfo.vue";
 import card from "~/components/card.vue";
 import cardInline from "~/components/cardInline.vue";
 import { EventBus } from "~/eventBus.js";

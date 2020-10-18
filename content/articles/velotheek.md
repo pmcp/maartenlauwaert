@@ -3,6 +3,8 @@ title: 'Velotheek: A Bike Renting Platform For Schools'
 cards:
   - provelo
   - provelo2
+test: 
+  -The brief: the-brief
 ---
 
 <!-- Components :: START -->

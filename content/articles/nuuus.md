@@ -1,6 +1,23 @@
 ---
 title: 'NUUUS: A News App For Teenagers'
 cards:
+toc:
+- name: The Brief
+  id: the-brief 
+- name: 'Step 1: Research'
+  id: step-1-qualitative-and-desk-research
+- name: 'Step 2: Smoke Screen'
+  id: step-2-smoke-screen
+- name: 'Step 2 bis: Teaser Movie'
+  id: step-2-bis-a-teaser-movie
+- name: 'Step 3: Test  Community'
+  id: step-3-test-community
+- name: 'Step 4: Prototype'
+  id: step-4-prototype
+- name: 'Step 5: MVPO'
+  id: fase-5-mvp
+- name: 'Step 6: Learnings'
+  id: step-6-analysis--learnings
 ---
 
 <!-- Components :: START -->
@@ -35,6 +52,7 @@ import articleVideo from '~/components/articleVideo.vue'
 <!-- <article-video id="Cwzfg-WiTuU" type="youtube" /> -->
 
 <!-- Content :: START -->
+
 <article-grid>
 
 ## The brief
@@ -207,7 +225,7 @@ Once we had an idea what the articles would look like, what the writing style sh
 <article-grid>
 After 4s sprints of each 2 weeks, we took a break, and analysed our results.
 
-## Fase 5: MVP
+## Step 5: MVP
 
 <image-inline>
     <g-image

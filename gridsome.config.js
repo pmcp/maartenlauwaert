@@ -30,9 +30,6 @@ module.exports = {
           }
         },
         // plugins: ['remark-toc'],
-
-          
-        
       }
     },
     {
@@ -55,7 +52,7 @@ module.exports = {
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       plugins: [
-        'remark-toc'
+        // 'remark-toc'
       ]
     }
   },

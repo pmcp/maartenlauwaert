@@ -1,9 +1,6 @@
 <template>
   <div>
-
     <div
-      @mouseover="hoveringInfo = true"
-      @mouseleave="hoveringInfo = false"
     >
       <a
         :href="card.url"

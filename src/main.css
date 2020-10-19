@@ -17,20 +17,23 @@
 	.highlight:hover {
 		background-size: 100% 100%;
 	}
-	.highlighted {
+	.highlight--active {
 		background-size: 100% 100%;
 	}
 	/* UNDERLINE Titles */
-	/* .animated-underline {
+	.animated-underline {
+    display: inline;
+    background-repeat: no-repeat;
+    transition: all 500ms ease-in-out;
 		background-position: bottom left;
-		background-size: 0% 5px;
+		background-size: 0 3px;
 		background-image: linear-gradient(theme('colors.accent'), theme('colors.accent'));
-		padding-bottom: 5px;
+		padding-bottom: 1px;
 	}
 
-	.animated-underline:hover {
-		background-size: 100% 5px;
-	} */
+	.animated-underline--active {
+		background-size: 30px 3px;
+	}
 
 	/* EMBED: Youtube */
 	.embed-container {

@@ -12,7 +12,7 @@
     <div class="container mx-auto flex flex-row mb-8 ">
       <div class="w-1/5">
         <div class="sticky top-5 ">
-          <scrollactive active-class="text-gray-800">
+          <scrollactive active-class="animated-underline--active" >
             <h3 class="text-xl font-bold text-gray-400 tracking-tight">
                 In this article
               </h3>
@@ -21,7 +21,7 @@
               <li v-for="(i,id) in $page.article.toc" :key="id">
                 <a
                   :href="'#'+i.id"
-                  class="scrollactive-item ">
+                  class="scrollactive-item animated-underline">
                   {{ i.name }}
                 </a>
               </li>
@@ -31,18 +31,15 @@
             <h3 class="text-xl font-bold text-gray-400 tracking-tight ">
               Side info & Glossary
             </h3>
-            
             <div
               v-for="(card, id) in $page.article.cards"
               :key="id"
-              @mouseover="setActiveCard(id)"
+              @mouseover="setActiveCard(card.id)"
               @mouseleave="setActiveCard(null)"
             >
-
-            <!-- {{id}} - {{ activeCardId}} -->
               <card
                 :card="card"
-                :active="id == activeCardId"
+                :active="card.id == activeCardId"
               ></card>
             </div>
             <!-- <side-info :activeCard="infoId" ></side-info> -->
@@ -129,15 +126,16 @@ export default {
     cardInline,
   },
   methods: {
-    setActiveCard(id){
-      this.activeCardId = id;
-      EventBus.$emit("setActiveCardIdFromSidebar", id);
+    setActiveCard(cardId){
+      this.activeCardId = cardId;
+      EventBus.$emit("setActiveCardIdFromSidebar", cardId);
     },  
     handleScroll: function (evt, el) {
       if (this.activeCardId === null) {
         return;
       }
       if (window.scrollY > this.scrollPos + this.scrollTreshold) {
+        console.log('test')
         this.activeCardId = null;
         this.scrollPos = window.scrollY;
       }
@@ -145,8 +143,8 @@ export default {
     },
   },
   created() {
-    EventBus.$on("setActiveCardId", (data) => {
-      this.activeCardId = data;
+    EventBus.$on("setActiveCardId", (cardId) => {
+      this.activeCardId = cardId;
     });
   },
 };

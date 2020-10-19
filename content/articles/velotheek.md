@@ -2,7 +2,7 @@
 title: 'Velotheek: A Bike Renting Platform For Schools'
 cards:
   - provelo
-  - provelo2
+  - test
 toc:
 - name: The Brief
   id: the-brief 
@@ -42,9 +42,9 @@ import articleGrid from '~/components/articleGrid.vue'
 
 When taking their students on excursion, the primary and secondary schools in the city of Brussels regularly have a shortage of bikes. This makes organizing an outing cumbersome. Not all city kids have bikes, because they are too expensive, or because they get stolen too often, etc. 
 
-<card-inline :id="0">Pro Velo</card-inline>, an organization who promotes biking in the city arranged a container full of bikes to be made available for the schools of Saint-Gilles, one of the communes of Brussels. At the same time, another commune also had the same problems, and a comparable solution. Teachers could reserve bikes for one or more days, pick them up, and return them themselves. They called it "Velotheek" (which translates to "bike library").
+<card-inline id="provelo">Pro Velo</card-inline>, an organization who promotes biking in the city arranged a container full of bikes to be made available for the schools of Saint-Gilles, one of the communes of Brussels. At the same time, another commune also had the same problems, and a comparable solution. Teachers could reserve bikes for one or more days, pick them up, and return them themselves. They called it "Velotheek" (which translates to "bike library").
 
-But both communes realized quickly that the reservations of the bikes would become complicated and time consuming for the people in charge. So they turned to me to come up with a more streamlined process.
+But both communes realized quickly that the reservations of the bikes would become complicated and time consuming for the people in charge. So they turned to me to come up with a more <card-inline id="test">streamlined process</card-inline>.
 
 ## Step 1: Research
 </article-grid>

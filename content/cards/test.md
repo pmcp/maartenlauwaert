@@ -1,6 +1,6 @@
 ---
-id: provelo2
-name: Pro Velo2
+id: test
+name: Streamlined Process
 url: https://www.provelo.org
 cat: partner
 type: link

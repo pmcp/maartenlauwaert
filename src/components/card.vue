@@ -2,12 +2,12 @@
   <div>
     <div
     >
-      <a
+      <!-- <a
         :href="card.url"
         target="_blank"
-      >
+      > -->
         <card-inner :card="card" :active="active"></card-inner>
-      </a>
+      <!-- </a> -->
     </div>
   </div>
 </template>

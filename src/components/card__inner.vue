@@ -50,7 +50,10 @@
                 d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
               />
             </svg>
+            <a :href="card.url"
+                target="_blank"
             <span class="text-gray-400 text-sm underline group-hover:text-gray-800 transition duration-500 ease-in-out">Visit site</span>
+            </a>
           </div>
         </div>
       </transition>

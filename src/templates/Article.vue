@@ -6,11 +6,26 @@
     >
       <h1
         v-html="$page.article.title"
-        class="mt-2 mb-8 text-6xl leading-10 font-extrabold tracking-tight text-gray-900 sm:text-5xl sm:leading-tight"
+        class="mt-2 mb-4 sm:mb-8 ml-4  sm:ml-0 font-extrabold tracking-tight text-gray-900 text-3xl sm:text-5xl leading-none sm:leading-tight"
       >A Bike Renting Platform For Schools </h1>
     </div>
-    <div class="container mx-auto flex flex-row mb-8 ">
-      <div class="w-1/5">
+    <div class="container mx-auto flex flex-col sm:flex-row mb-8 ">
+      <!-- <div class="sm:hidden">
+        <h3 class="text-xl font-bold text-gray-400 tracking-tight">
+                In this article
+              </h3>
+            <ul class="sticky top-0 text-sm leading-loose text-gray-400 capitalize pb-8">
+              
+              <li v-for="(i,id) in $page.article.toc" :key="id">
+                <a
+                  :href="'#'+i.id"
+                  class="scrollactive-item animated-underline">
+                  {{ i.name }}
+                </a>
+              </li>
+            </ul>
+      </div> -->
+      <div class="pl-4 sm:pl-4 sm:w-1/5 mb-4 sm:mb-0">
         <div class="sticky top-5 ">
           <scrollactive active-class="animated-underline--active" >
             <h3 class="text-xl font-bold text-gray-400 tracking-tight">
@@ -27,7 +42,7 @@
               </li>
             </ul>
           </scrollactive>
-          <div class="leading-loose" v-if="$page.article.cards.length > 0">
+          <div class="leading-loose hidden sm:block" v-if="$page.article.cards.length > 0">
             <h3 class="text-xl font-bold text-gray-400 tracking-tight ">
               Side info & Glossary
             </h3>
@@ -48,7 +63,26 @@
       </div>
 
       <!-- <div class="flex-grow container mx-auto grid grid-cols-12 gap-8 pl-8 "> -->
-        <VueRemarkContent class="flex-grow container mx-auto grid grid-cols-12 gap-8 pl-8 "/>
+        <VueRemarkContent class="flex-grow container mx-auto grid grid-cols-12 gap-8 pl-4 sm:pl-8 "/>
+      
+      
+      <div class="leading-loose sm:hidden pl-4" v-if="$page.article.cards.length > 0">
+            <h3 class="text-xl font-bold text-gray-400 tracking-tight ">
+              Info & Glossary
+            </h3>
+            <div
+              v-for="(card, id) in $page.article.cards"
+              :key="id"
+              @mouseover="setActiveCard(card.id)"
+              @mouseleave="setActiveCard(null)"
+            >
+              <card
+                :card="card"
+                :active="card.id == activeCardId"
+              ></card>
+            </div>
+            <!-- <side-info :activeCard="infoId" ></side-info> -->
+          </div>
       <!-- </div> -->
 
       <!-- 

@@ -1,10 +1,9 @@
 <template>
-    <nav class="container mx-auto flex flex-row text-base py-10">
-      <g-link class="" to="/">Home</g-link>
-      <g-link class="  pl-8 " to="/about/">About me</g-link>
-      <g-link class="  pl-8 " to="/about/">UX</g-link>
-      <g-link class="  pl-8 " to="/about/">Prototyping</g-link>
-      <g-link class="  pl-8 " to="/about/">Articles</g-link>
-      <g-link class="  pl-8 " to="/about/">Tools & Terminology</g-link>
-    </nav>
+  <nav class="container pl-4 sm:px-0 mx-auto flex flex-row flex-no-wrap text-sm py-5 sm:py-10 overflow-x-auto">
+    <g-link class="" to="/">Home</g-link>
+    <g-link class="pl-4  md:pl-8 whitespace-no-wrap" to="/about/">About me</g-link>
+    <g-link class="pl-4  md:pl-8 whitespace-no-wrap" to="/articles/">Work & Writings</g-link>
+    <g-link class="pl-4 pr-4 md:pl-8 whitespace-no-wrap"  to="/glossary/">Tools & Terms</g-link>
+  </nav>
 </template>
+  

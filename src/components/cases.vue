@@ -1,6 +1,6 @@
 <template>
 <div class="bg-grey-400 p-15 ">
-  <div class="container mx-auto m-15">
+  <div class="container mx-auto m-15 ">
     <h2 class="text-3xl font-bold text-gray-800 tracking-tight pb-7 capitalize">Case studies</h2>
     <div class="mt-6 grid gap-16 pt-10 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
       <div v-for="i in 2" :key="i">

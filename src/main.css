@@ -22,9 +22,9 @@
 	}
 	/* UNDERLINE Titles */
 	.animated-underline {
-    display: inline;
-    background-repeat: no-repeat;
-    transition: all 500ms ease-in-out;
+		display: inline;
+		background-repeat: no-repeat;
+		transition: all 500ms ease-in-out;
 		background-position: bottom left;
 		background-size: 0 3px;
 		background-image: linear-gradient(theme('colors.accent'), theme('colors.accent'));
@@ -52,6 +52,30 @@
 		width: 100%;
 		height: 100%;
 	}
+
+
+  /* Detail / Summary  */
+  /* TODO: make tailwind conform */
+  details[open] summary ~ * {
+    animation: sweep .2s ease-in-out;
+  }
+
+  .cursor-help {
+    cursor: help;
+  }
+  
+  @keyframes sweep {
+    0%    {opacity: 0; margin-top: 0}
+    100%  {opacity: 1; margin-top: 0.25rem}
+  }
+
+  details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  
 }
 
 /* FONTS */

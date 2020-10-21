@@ -1,5 +1,5 @@
 <template>
-  <div class="text-gray-500 col-span-full"
+  <div class="text-gray-500 col-span-full px-4 sm:px-0"
   :class="gridClasses">
     <slot></slot>
   </div>

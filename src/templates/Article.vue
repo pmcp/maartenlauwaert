@@ -1,15 +1,15 @@
 <template>
   <Layout>
     <div
-      class="container mx-auto pb-8"
+      class="container mx-auto "
       v-scroll="handleScroll"
     >
       <h1
         v-html="$page.article.title"
         class="mt-2 mb-4 sm:mb-8 ml-4  sm:ml-0 font-extrabold tracking-tight text-gray-900 text-3xl sm:text-5xl leading-none sm:leading-tight"
-      >A Bike Renting Platform For Schools </h1>
+      ></h1>
     </div>
-    <div class="container mx-auto flex flex-col sm:flex-row mb-8 ">
+    <div class="container mx-auto flex flex-col sm:flex-row sm:pb-8 ">
       <!-- <div class="sm:hidden">
         <h3 class="text-xl font-bold text-gray-400 tracking-tight">
                 In this article
@@ -44,15 +44,14 @@
           </scrollactive>
           <div class="leading-loose hidden sm:block" v-if="$page.article.cards.length > 0">
             <h3 class="text-xl font-bold text-gray-400 tracking-tight ">
-              Side info & Glossary
+              Glossary
             </h3>
             <div
               v-for="(card, id) in $page.article.cards"
               :key="id"
-              @mouseover="setActiveCard(card.id)"
-              @mouseleave="setActiveCard(null)"
             >
               <card
+              class="text-gray-400"
                 :card="card"
                 :active="card.id == activeCardId"
               ></card>
@@ -63,25 +62,23 @@
       </div>
 
       <!-- <div class="flex-grow container mx-auto grid grid-cols-12 gap-8 pl-8 "> -->
-        <VueRemarkContent class="flex-grow container mx-auto grid grid-cols-12 gap-8 pl-4 sm:pl-8 "/>
+        <VueRemarkContent class="flex-grow container mx-auto grid grid-cols-12 gap-8 "/>
       
       
-      <div class="leading-loose sm:hidden pl-4" v-if="$page.article.cards.length > 0">
-            <h3 class="text-xl font-bold text-gray-400 tracking-tight ">
-              Info & Glossary
+      <div class="leading-loose sm:hidden pl-4 mt-9 py-4 bg-gray-100" v-if="$page.article.cards.length > 0">
+            <h3 class="text-xl font-bold text-gray-800 tracking-tight ">
+              Glossary
             </h3>
             <div
               v-for="(card, id) in $page.article.cards"
               :key="id"
-              @mouseover="setActiveCard(card.id)"
-              @mouseleave="setActiveCard(null)"
+              
             >
               <card
+              class="text-gray-800"
                 :card="card"
-                :active="card.id == activeCardId"
               ></card>
             </div>
-            <!-- <side-info :activeCard="infoId" ></side-info> -->
           </div>
       <!-- </div> -->
 

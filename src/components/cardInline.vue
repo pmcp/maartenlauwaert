@@ -5,7 +5,7 @@
         <summary class="highlight cursor-help">
           <slot></slot>
         </summary>
-        <div class="absolute shadow w-full bg-white px-4 py-6">
+        <div class="absolute left-0 shadow w-full bg-white px-4 py-6">
           <span class="mt-0 mb-0" >{{theCard.descr}}</span>
         <a
         :href="theCard.url"
@@ -36,10 +36,10 @@
     </span>
     <span
     @mouseover="setActiveCardId(id)" @mouseleave="setActiveCardId(null)"
-      class="text-gray-800 cursor-help hidden sm:inlinse "
+      class="text-gray-800 cursor-help hidden sm:inline "
     >
       <span
-        class="highlight"
+        class="highlight underline"
         :class="{'highlight--active': active}"
       >
         <slot></slot>

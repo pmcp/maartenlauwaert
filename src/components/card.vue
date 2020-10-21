@@ -1,15 +1,45 @@
 <template>
-  <div>
+  <details :open="active">
+    <summary>
+      <span
+        class="text-sm highlight cursor-pointer underline "
+        :class="{'highlight--active ': active,}"
+      >{{card.name}}</span>
+    </summary>
+    <div class="
+    leading-snug
+          
+          text-xs
+          italic">
+      {{ card.descr }}
+    </div>
     <div
+      v-if="card.type == 'link'"
+      class="mb-4 "
     >
-      <!-- <a
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        class=" w-4 h-4  inline text-gray-400 pr-1"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+        />
+      </svg>
+      <a
         :href="card.url"
         target="_blank"
-      > -->
-        <card-inner :card="card" :active="active"></card-inner>
-      <!-- </a> -->
+      >
+        <span class="text-xs underline">Visit site</span>
+      </a>
     </div>
-  </div>
+    <div class="border-b border-gray-300 mb-2 px-4"></div>
+  </details>
 </template>
 
 <static-query>
@@ -28,11 +58,7 @@
 </static-query>
 
 <script>
-import cardInner from "@/components/card__inner.vue";
 export default {
-  components: {
-    cardInner,
-  },
   props: {
     card: {
       type: Object,
@@ -42,7 +68,7 @@ export default {
     },
     active: {
       type: Boolean,
-      default: false
+      default: false,
     },
   },
   // computed: {

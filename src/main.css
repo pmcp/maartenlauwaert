@@ -70,10 +70,12 @@
   }
 
   details > summary {
-    list-style: none;
+    /* list-style: none; */
   }
-  details > summary::-webkit-details-marker {
-    display: none;
+  details > summary::-webkit-details-marker, details > summary::marker {
+    color: theme('colors.gray.300');
+    opacity: .3;
+    /* display: none; */
   }
   
 }

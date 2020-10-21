@@ -2,10 +2,10 @@
   <span>
     <span>
       <details class="inline sm:hidden">
-        <summary class="highlight cursor-help">
+        <summary class="highlight cursor-help underline" :style="lineHeight">
           <slot></slot>
         </summary>
-        <div class="absolute left-0 shadow w-full bg-white px-4 py-6">
+        <div ref="sum" class="absolute left-0 shadow-inner w-full bg-white px-4 py-6" >
           <span class="mt-0 mb-0" >{{theCard.descr}}</span>
         <a
         :href="theCard.url"
@@ -39,7 +39,7 @@
       class="text-gray-800 cursor-help hidden sm:inline "
     >
       <span
-        class="highlight underline"
+        class="highlight underline prose prose-base"
         :class="{'highlight--active': active}"
       >
         <slot></slot>
@@ -110,6 +110,11 @@ export default {
     theCard() {
       return this.$static.cards.edges.filter((card) => this.id === card.node.id)[0].node;
     },
+    lineHeight(){
+
+      console.log(this.$refs.sum)
+      return { marginBottom: '4rem' }
+    }
   },
   methods: {
     setActiveCardId(card) {

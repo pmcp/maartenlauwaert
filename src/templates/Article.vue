@@ -6,7 +6,7 @@
     >
       <h1
         v-html="$page.article.title"
-        class="mt-2 mb-4 sm:mb-8 ml-4  sm:ml-0 font-extrabold tracking-tight text-gray-900 text-3xl sm:text-5xl leading-none sm:leading-tight"
+        class="mt-2 mb-6 sm:mb-8 ml-4 sm:ml-0 font-extrabold tracking-tight text-gray-900 text-3xl sm:text-5xl leading-snug sm:leading-tight"
       ></h1>
     </div>
     <div class="container mx-auto flex flex-col sm:flex-row sm:pb-8 ">
@@ -25,13 +25,13 @@
               </li>
             </ul>
       </div> -->
-      <div class="pl-4 sm:pl-4 sm:w-1/5 mb-4 sm:mb-0">
+      <div class="pl-4 sm:pl-4 sm:w-1/4 mb-4 sm:mb-0">
         <div class="sticky top-5 ">
           <scrollactive active-class="animated-underline--active" >
-            <h3 class="text-xl font-bold text-gray-400 tracking-tight">
+            <h3 class="text-2xl font-bold text-gray-800 sm:text-gray:400 tracking-tight pb-5 sm:pb-0">
                 In this article
               </h3>
-            <ul class="sticky top-0 text-sm leading-loose text-gray-400 capitalize pb-8">
+            <ul class="sticky top-0 text-sm leading-loose text-gray-400 capitalize pb-8 list-disc sm:list-none px-4 sm:px-0">
               
               <li v-for="(i,id) in $page.article.toc" :key="id">
                 <a

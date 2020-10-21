@@ -36,7 +36,7 @@ import articleGrid from '~/components/articleGrid.vue'
 <!-- Components :: END -->
 
 <!-- Content :: START -->
-<article-grid :start="2" :end="10">
+<article-grid :prose="true">
 
 ## The brief
 
@@ -48,18 +48,18 @@ But both communes realized quickly that the reservations of the bikes would beco
 
 ## Step 1: Research
 </article-grid>
-<article-grid :start="1" :end="11" :prose="false">
+<article-grid :start="2" :end="12" :prose="false">
 <image-inline>
     <g-image
       slot="image"
-      class="w-auto"
+      class="w-auto mx-auto"
       src="~/images/velotheek/velotheek_excalidraw_step1.png"
       alt="An scheme showing the timeline of the project. Highlighted is step 1: Research"
     />  
 </image-inline>
 </article-grid>
 
-<article-grid :start="2" :end="10">
+<article-grid :prose="true">
 <article-meta>
   <span slot="name">Duration</span>
   <span slot="content">2 weeks</span>
@@ -88,11 +88,11 @@ Every "persona" gets it's own "jobs to be done", mapping of needs and potential 
 
 ## Step 2: Decision Tree
 </article-grid>
-<article-grid :start="1" :end="11" :prose="false">
+<article-grid :start="2" :end="12" :prose="false">
 <image-inline >
     <g-image
       slot="image"
-      class="w-auto"
+      class="w-auto mx-auto"
       src="~/images/velotheek/velotheek_excalidraw_step2.png"
       alt="A scheme showing the timeline of the project. Highlighted is step 1: Research"
     />
@@ -122,20 +122,20 @@ This very low fidelity prototype gets shared with the the smallest group of stak
 <image-inline>
     <g-image
       slot="image"
-      class="w-auto"
+      class="w-auto mx-auto"
       src="~/images/velotheek/velotheek2.gif"
       alt="An animated image of an early prototype flow of the application"
     />  
-    <span slot="caption">Step 1: Research</span>
+    <span slot="caption">A very early prototype</span>
 </image-inline>
 </article-grid>
-<article-grid :prose="false" :span="10">
+<article-grid :prose="false" :span="12">
 
 <br>
 <image-inline>
     <g-image
       slot="image"
-      class="w-auto"
+      class="w-auto mx-auto"
       src="~/images/velotheek/velotheek4.png"
       alt="A screenshot of the application: Figma, showing the low fidelity prototype."
     />  
@@ -145,22 +145,22 @@ This very low fidelity prototype gets shared with the the smallest group of stak
 </article-grid>
 
 
-<article-grid :start="2" :end="10">
+<article-grid >
 
 ## Step 3: Wireframing
 
 </article-grid>
-<article-grid :start="1" :end="11" :prose="false">
+<article-grid :start="2" :end="12" :prose="false">
 <image-inline>
     <g-image
       slot="image"
-      class="w-auto"
+      class="w-auto mx-auto"
       src="~/images/velotheek/velotheek_excalidraw_step3.png"
       alt="An scheme showing the timeline of the project. Highlighted is step 3: Wireframing"
     />  
 </image-inline>
 </article-grid>
-<article-grid :start="2" :end="10">
+<article-grid >
 <article-meta>
   <span slot="name">Duration</span>
   <span slot="content">2 weeks</span>
@@ -174,34 +174,34 @@ This very low fidelity prototype gets shared with the the smallest group of stak
 Based on the decision tree, I created a wireframe. I always choose a basic design to start with, so the wireframe has some identity to it. This probably goes against some wireframing rules, but I like to give the project immediately  a certain vibe, it makes it more fun to play with. The trick is to not get lost in design. To overcome this, I always use the same design system, and limit my "playing around" to mainly the colors.
 
 </article-grid>
-<article-grid :start="1" :end="11" :prose="false">
+<article-grid :prose="false">
 
 <image-inline>
     <g-image
       slot="image"
-      class="w-auto"
+      class="w-auto mx-auto"
       src="~/images/velotheek/velotheek3.png"
       alt="First wireframes made in Figma."
     />
     <span slot="caption">First wireframes made in Figma.</span>
 </image-inline>
 </article-grid>
-<article-grid :start="2" :end="10">
+<article-grid :start="2" :end="12">
 
 ## Step 4: Click Prototype
 </article-grid>
-<article-grid :start="1" :end="11" :prose="false">
+<article-grid :start="2" :end="12" :prose="false">
 <image-inline>
     <g-image
       slot="image"
-      class="w-auto"
+      class="w-auto mx-auto"
       src="~/images/velotheek/velotheek_excalidraw_step4.png"
       alt="An scheme showing the timeline of the project. Highlighted is step 4: Click Prototype"
     />  
 </image-inline>
          
 </article-grid>
-<article-grid :start="2" :end="10">
+<article-grid>
 <article-meta>
   <span slot="name">Duration</span>
   <span slot="content">2 weeks</span>
@@ -218,20 +218,20 @@ Once all the clicks and paths are in place, the app gets send to some users. In 
 
 ## Step 5: MVP
 </article-grid>
-<article-grid :start="1" :end="11" :prose="false">
+<article-grid :start="2" :end="12" :prose="false">
 <image-inline>
     <g-image
       slot="image"
-      class="w-auto"
+      class="w-auto mx-auto"
       src="~/images/velotheek/velotheek_excalidraw_step5.png"
       alt="An scheme showing the timeline of the project. Highlighted is step 5: MVP"
     />  
 </image-inline>
 </article-grid>
-<article-grid :start="2" :end="10">
+<article-grid>
 <article-meta>
   <span slot="name">Duration</span>
-  <span slot="content">6 months (2 months of building, 4 months of testing)</span>
+  <span slot="content">6 months (2 months of building, 4 months of testing  )</span>
 </article-meta>
 
 <article-meta>
@@ -244,12 +244,12 @@ Once I have a decent wireframed app, and covered as much as essential use cases,
 In this case I designed the flow to reserve bikes for one specific day. The app gets send to the same teachers I contacted in step 3, and I asked them to use the app a few times. Using analytics I can check the click paths, and see were the user drops off. All the feedback coming in gets mapped out in Trello.
 
 </article-grid>
-<article-grid :start="1" :end="11" :prose="false">
+<article-grid :prose="false">
 
 <image-inline>
     <g-image
       slot="image"
-      class="w-auto"
+      class="w-auto mx-auto"
       src="~/images/velotheek/velotheek4.png"
       alt="Screenshot of a Trello board, with feedback of users"
     />
@@ -257,23 +257,23 @@ In this case I designed the flow to reserve bikes for one specific day. The app 
 </image-inline>
 
 </article-grid>
-<article-grid :start="2" :end="10">
+<article-grid >
 
 ## Step 6: Live beta
 
 </article-grid>
-<article-grid :start="1" :end="11" :prose="false">
+<article-grid :start="2" :end="12" :prose="false">
 <image-inline>
     <g-image
       slot="image"
-      class="w-auto"
+      class="w-auto mx-auto"
       src="~/images/velotheek/velotheek_excalidraw_step5.png"
       alt="An scheme showing the timeline of the project. Highlighted is step 6: Live Beta"
     />  
 </image-inline>
          
 </article-grid>
-<article-grid :start="2" :end="10">
+<article-grid >
 
 <article-meta>
   <span slot="name">Duration</span>
@@ -288,18 +288,18 @@ In this case I designed the flow to reserve bikes for one specific day. The app 
 I use the lessons of phase 4 to iterate on the code and create a prototype that can be used by a bigger group of people, that can actually be send out to a live audience. At this point I  want to start collecting quantitave data, so this is why scale becomes important. Depending how risk averse the client is, this app can be used in a fully live setting, as a beta version. Most important about this phase is the integration of an analytics suite (eg. Google Analytics) , and the possibility for users to easily send feedback.
 
 </article-grid>
-<article-grid :start="1" :end="11" :prose="false">
+<article-grid :prose="false">
 <image-inline>
     <g-image
       slot="image"
-      class="w-auto"
+      class="w-auto mx-auto"
       src="~/images/velotheek/velotheek1.gif"
       alt="An animation of the Velotheek as it is being used right now."
     />
     <span slot="caption">The Velotheek as it is being used right now.</span>
 </image-inline>
 </article-grid>
-<article-grid :start="2" :end="10">
+<article-grid>
 In this phase real users are using the app, and things will fail. It's important to make it very clear to your users that this is a beta app, that things will go wrong, and that their feedback is very appreciated.
 
 During this period, I will regularly update the app, introduce new features or kick out existing ones, so the Beta can evolve towards an mature product .

@@ -1,88 +1,81 @@
 <template>
   <Layout>
     <div
-      class="container mx-auto "
+      
       v-scroll="handleScroll"
     >
       <h1
         v-html="$page.article.title"
-        class="mt-2 mb-6 sm:mb-8 ml-4 sm:ml-0 font-extrabold tracking-tight text-gray-900 text-3xl sm:text-5xl leading-snug sm:leading-tight"
+        class="px-4 container mx-auto mt-2 mb-6 sm:mb-14 font-extrabold tracking-tight text-gray-900 text-3xl sm:text-5xl leading-snug sm:leading-tight"
       ></h1>
-    </div>
-    <div class="container mx-auto flex flex-col sm:flex-row sm:pb-8 ">
-      <!-- <div class="sm:hidden">
-        <h3 class="text-xl font-bold text-gray-400 tracking-tight">
-                In this article
+
+      <div class="px-4  flex flex-col sm:flex-row sm:pb-8 container mx-auto">
+        <div class="w-full lg:w-1/4 mb-4 sm:mb-0 ">
+          <div class="sticky top-5 ">
+            <scrollactive active-class="animated-underline--active">
+              <h3 class="text-2xl font-bold text-gray-800 sm:text-gray:400 tracking-tight pb-5 sm:pb-0">
+                Chapters
               </h3>
-            <ul class="sticky top-0 text-sm leading-loose text-gray-400 capitalize pb-8">
-              
-              <li v-for="(i,id) in $page.article.toc" :key="id">
-                <a
-                  :href="'#'+i.id"
-                  class="scrollactive-item animated-underline">
-                  {{ i.name }}
-                </a>
-              </li>
-            </ul>
-      </div> -->
-      <div class="pl-4 sm:pl-4 sm:w-1/4 mb-4 sm:mb-0">
-        <div class="sticky top-5 ">
-          <scrollactive active-class="animated-underline--active" >
-            <h3 class="text-2xl font-bold text-gray-800 sm:text-gray:400 tracking-tight pb-5 sm:pb-0">
-                In this article
-              </h3>
-            <ul class="sticky top-0 text-sm leading-loose text-gray-400 capitalize pb-8 list-disc sm:list-none px-4 sm:px-0">
-              
-              <li v-for="(i,id) in $page.article.toc" :key="id">
-                <a
-                  :href="'#'+i.id"
-                  class="scrollactive-item animated-underline">
-                  {{ i.name }}
-                </a>
-              </li>
-            </ul>
-          </scrollactive>
-          <div class="leading-loose hidden sm:block" v-if="$page.article.cards.length > 0">
-            <h3 class="text-xl font-bold text-gray-400 tracking-tight ">
-              Glossary
-            </h3>
+              <ul class="sticky top-0 text-sm leading-loose text-gray-400 capitalize pb-8 list-disc sm:list-none px-4 sm:px-0 ">
+
+                <li
+                  v-for="(i,id) in $page.article.toc"
+                  :key="id"
+                >
+                  <a
+                    :href="'#'+i.id"
+                    class="scrollactive-item animated-underline"
+                  >
+                    {{ i.name }}
+                  </a>
+                </li>
+              </ul>
+            </scrollactive>
             <div
-              v-for="(card, id) in $page.article.cards"
-              :key="id"
+              class="leading-loose hidden sm:block"
+              v-if="$page.article.cards.length > 0"
             >
-              <card
-              class="text-gray-400"
-                :card="card"
-                :active="card.id == activeCardId"
-              ></card>
+              <h3 class="text-xl font-bold text-gray-400 tracking-tight ">
+                Glossary
+              </h3>
+              <div
+                v-for="(card, id) in $page.article.cards"
+                :key="id"
+              >
+                <card
+                  class="text-gray-400"
+                  :card="card"
+                  :active="card.id == activeCardId"
+                ></card>
+              </div>
+              <!-- <side-info :activeCard="infoId" ></side-info> -->
             </div>
-            <!-- <side-info :activeCard="infoId" ></side-info> -->
           </div>
         </div>
-      </div>
 
-      <!-- <div class="flex-grow container mx-auto grid grid-cols-12 gap-8 pl-8 "> -->
-        <VueRemarkContent class="flex-grow container mx-auto grid grid-cols-12 gap-8 "/>
-      
-      
-      <div class="leading-loose sm:hidden pl-4 mt-9 py-4 bg-gray-100" v-if="$page.article.cards.length > 0">
-            <h3 class="text-xl font-bold text-gray-800 tracking-tight ">
-              Glossary
-            </h3>
-            <div
-              v-for="(card, id) in $page.article.cards"
-              :key="id"
-              
-            >
-              <card
+        <!-- <div class="flex-grow container mx-auto grid grid-cols-12 gap-8 pl-8 "> -->
+        <VueRemarkContent class="flex-grow grid grid-cols-12 gap-8 " />
+
+        <div
+          class="leading-loose sm:hidden pl-4 mt-9 py-4 bg-gray-100"
+          v-if="$page.article.cards.length > 0"
+        >
+          <h3 class="text-xl font-bold text-gray-800 tracking-tight ">
+            Glossary
+          </h3>
+          <div
+            v-for="(card, id) in $page.article.cards"
+            :key="id"
+          >
+            <card
               class="text-gray-800"
-                :card="card"
-              ></card>
-            </div>
+              :card="card"
+            ></card>
           </div>
-      <!-- </div> -->
+        </div>
+        <!-- </div> -->
 
-      <!-- 
+        <!-- 
         <div class="w-1/6 pl-5">
           <div class="sticky top-5">
             <h3 class="text-xl font-bold text-gray-400 tracking-tight">
@@ -105,6 +98,7 @@
         </div>
        -->
 
+      </div>
     </div>
 
   </Layout>
@@ -157,16 +151,16 @@ export default {
     cardInline,
   },
   methods: {
-    setActiveCard(cardId){
+    setActiveCard(cardId) {
       this.activeCardId = cardId;
       EventBus.$emit("setActiveCardIdFromSidebar", cardId);
-    },  
+    },
     handleScroll: function (evt, el) {
       if (this.activeCardId === null) {
         return;
       }
       if (window.scrollY > this.scrollPos + this.scrollTreshold) {
-        console.log('test')
+        console.log("test");
         this.activeCardId = null;
         this.scrollPos = window.scrollY;
       }

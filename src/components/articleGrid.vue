@@ -1,5 +1,5 @@
 <template>
-  <div class="text-gray-500 col-span-full px-4 sm:px-0"
+  <div class="text-gray-500 col-span-full container mx-auto"
   :class="gridClasses">
     <slot></slot>
   </div>
@@ -30,15 +30,16 @@ export default {
     gridClasses() {
       let prose = [];
       let gridClasses = [];
+      console.log(this.start,  this.end, this.span)
       if(this.prose) prose = ['prose', 'prose-base'];
       if(this.start !== null && this.span === null) {
         gridClasses = [`sm:col-start-${this.start}`, `sm:col-end-${this.end}`]
       }
       if(this.start === null && this.span === null) {
-        gridClasses = [`sm:col-span-12`]
+        gridClasses = [`xs:col-span-12`]
       }
       if(this.start === null && this.span === null) {
-        gridClasses = [`sm:col-span-12`]
+        gridClasses = [`xs:col-span-12`]
       }
       if(this.span !== null) {
         gridClasses = [`sm:col-span-${this.span}`]

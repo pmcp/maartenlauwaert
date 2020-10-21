@@ -10,10 +10,11 @@
       ></h1>
 
       <div class="px-4  flex flex-col sm:flex-row sm:pb-8 container mx-auto">
-        <div class="w-full lg:w-1/4 mb-4 sm:mb-0 ">
+        <div class="w-full lg:w-1/4 mb-4 sm:mb-0  ">
           <div class="sticky top-5 ">
+            <div class="h-full overflow-y-scroll">
             <scrollactive active-class="animated-underline--active">
-              <h3 class="text-2xl font-bold text-gray-800 sm:text-gray:400 tracking-tight pb-5 sm:pb-0">
+              <h3 class="text-2xl sm:text-xl font-bold text-gray-800 sm:text-gray-500 tracking-tight pb-5 sm:pb-0">
                 Chapters
               </h3>
               <ul class="sticky top-0 text-sm leading-loose text-gray-400 capitalize pb-8 list-disc sm:list-none px-4 sm:px-0 ">
@@ -35,7 +36,7 @@
               class="leading-loose hidden sm:block"
               v-if="$page.article.cards.length > 0"
             >
-              <h3 class="text-xl font-bold text-gray-400 tracking-tight ">
+              <h3 class="text-xl font-bold text-gray-500 tracking-tight ">
                 Glossary
               </h3>
               <div
@@ -50,6 +51,7 @@
               </div>
               <!-- <side-info :activeCard="infoId" ></side-info> -->
             </div>
+            </div>    
           </div>
         </div>
 

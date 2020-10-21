@@ -6,13 +6,13 @@
     >
       <h1
         v-html="$page.article.title"
-        class="px-4 container mx-auto mt-2 mb-6 sm:mb-14 font-extrabold tracking-tight text-gray-900 text-3xl sm:text-5xl leading-snug sm:leading-tight"
+        class="px-4 sm:px-0 container mx-auto mt-2 mb-6 sm:mb-14 font-extrabold tracking-tight text-gray-900 text-3xl sm:text-5xl leading-snug sm:leading-tight"
       ></h1>
 
-      <div class="px-4  flex flex-col sm:flex-row sm:pb-8 container mx-auto">
+      <div class="px-4 sm:px-0 flex flex-col sm:flex-row sm:pb-8 container mx-auto">
         <div class="w-full lg:w-1/4 mb-4 sm:mb-0  ">
           <div class="sticky top-5 ">
-            <div class="h-full overflow-y-scroll">
+            <div class="h-auto sm:h-screen overflow-y-scroll">
             <scrollactive active-class="animated-underline--active">
               <h3 class="text-2xl sm:text-xl font-bold text-gray-800 sm:text-gray-500 tracking-tight pb-5 sm:pb-0">
                 Chapters

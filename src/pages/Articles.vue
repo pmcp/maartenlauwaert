@@ -1,11 +1,17 @@
 <template>
-  <div class="bg-gray-100 p-15 ">
-    <div class="container mx-auto m-15 ">
+  <Layout>
+          <h1
+        
+        class="px-4 sm:px-0 container mx-auto mt-2 mb-6 sm:mb-14 font-extrabold tracking-tight text-gray-900 text-3xl sm:text-5xl leading-snug sm:leading-tight"
+      >Work & Writings</h1>
+
+          <div class="container mx-auto m-15 ">
       <h2 class="text-3xl font-bold text-gray-800 tracking-tight pb-7 capitalize">Case studies</h2>
-      <div class="mt-6 grid gap-16 pt-10 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
+      <div class="grid gap-16 pt-10 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
         <div
-          v-for="(i, id) in cases"
+          v-for="(i, id) in $page.allArticle.edges"
           :key="id"
+          class="shadow p-6"
         >
 
           <!-- <p class="text-sm leading-5 text-gray-500">
@@ -34,17 +40,35 @@
 
       </div>
     </div>
-  </div>
+
+
+    
+  </Layout>
 </template>
+
+<page-query>
+  query {
+    allArticle(filter: { type: { eq: "case" }}) {
+    edges {
+      node {
+        meta {
+          slug
+          button
+          summary
+        }
+        title
+      }
+    }
+  }
+  }
+</page-query>
 <script>
+
+
 export default {
-  props: {
-    cases: {
-      type: Array,
-      default() {
-        return {};
-      },
-    },
+
+  metaInfo: {
+    title: "Work & Writings",
   },
 };
 </script>

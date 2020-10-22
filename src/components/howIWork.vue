@@ -82,7 +82,7 @@ export default {
   },
   created() {
     if (this.isCardsActive)
-      window.addEventListener("scroll", this.handleScroll);
+      global.addEventListener("scroll", this.handleScroll);
 
     EventBus.$on("setActiveCardId", (cardId) => {
       this.activeCardId = cardId;

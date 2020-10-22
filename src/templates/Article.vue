@@ -173,10 +173,10 @@ export default {
       if (this.activeCardId === null) {
         return;
       }
-      if (window.scrollY > this.scrollPos + this.scrollTreshold) {
+      if (global.scrollY > this.scrollPos + this.scrollTreshold) {
         console.log("test");
         this.activeCardId = null;
-        this.scrollPos = window.scrollY;
+        this.scrollPos = global.scrollY;
       }
       return;
     },
@@ -193,14 +193,14 @@ export default {
   },
   created() {
     if (this.isCardsActive)
-      window.addEventListener("scroll", this.handleScroll);
+      global.addEventListener("scroll", this.handleScroll);
 
     EventBus.$on("setActiveCardId", (cardId) => {
       this.activeCardId = cardId;
     });
   },
   beforeDestroy() {
-    window.removeEventListener("scroll", this.handleScroll, false);
+    global.removeEventListener("scroll", this.handleScroll, false);
   },
 };
 </script>

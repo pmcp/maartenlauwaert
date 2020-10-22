@@ -12,19 +12,19 @@
         >
 
           <div>
-           
-              <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
-                {{ card.node.name}}
-              </h3>
-              <p class="mt-3 text-base leading-6 text-gray-500">
-                {{ card.node.descr }}
-              </p>
+
+            <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
+              {{ card.node.name}}
+            </h3>
+            <p class="mt-3 text-base leading-6 text-gray-500">
+              {{ card.node.descr }}
+            </p>
 
           </div>
         </div>
-        </div>
-
       </div>
+
+    </div>
 
   </Layout>
 </template>

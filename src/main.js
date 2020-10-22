@@ -9,8 +9,12 @@ import VueScrollactive from 'vue-scrollactive';
 
 
 // Global Components
-// import testComp from '~/components/testComp.vue'
-// import cardInline from '~/components/cardInline.vue'
+import cardInline from '~/components/cardInline.vue'
+import imageInline from '~/components/imageInline.vue'
+import articleMeta from '~/components/articleMeta.vue'
+import articleGrid from '~/components/articleGrid.vue'
+
+
 
 import DefaultLayout from '~/layouts/Default.vue'
 
@@ -19,8 +23,10 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('Layout', DefaultLayout),
 
   // Global components
-  // Vue.component('test-comp', testComp),
-  // Vue.component('cardInline', cardInline),
+  Vue.component('cardInline', cardInline),
+  Vue.component('imageInline', imageInline),
+  Vue.component('articleMeta', articleMeta),
+  Vue.component('articleGrid', articleGrid),
 
 
 

@@ -1,9 +1,11 @@
 <template>
-  <div>
+  <div class="flex flex-col h-screen  ">
     <header>
       <main-nav></main-nav>
     </header>
-    <slot/>
+    <main class="flex-grow">
+      <slot />
+    </main>
     <main-footer></main-footer>
   </div>
 </template>

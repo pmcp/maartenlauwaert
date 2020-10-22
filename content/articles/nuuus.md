@@ -1,6 +1,10 @@
 ---
 title: 'NUUUS: A News App For Teenagers'
-cards:
+type: 'case'
+meta: 
+  slug: nuuus
+  button: 'Read all about it'
+  summary: 'Creating an news app'
 toc:
 - name: The Brief
   id: the-brief 
@@ -19,40 +23,6 @@ toc:
 - name: 'Step 6: Learnings'
   id: step-6-analysis--learnings
 ---
-
-<!-- Components :: START -->
-import cardInline from '~/components/cardInline.vue'
-import imageInline from '~/components/imageInline.vue'
-import articleMeta from '~/components/articleMeta.vue'
-import articleGrid from '~/components/articleGrid.vue'
-import articleVideo from '~/components/articleVideo.vue'
-<!-- Components :: END -->
-
-<!-- Examples of components -->
-
-<!-- <card-inline :id="0">Pro Velo</card-inline> -->
-
-<!-- <image-inline>
-    <g-image
-      slot="image"
-      class="w-auto"
-      src="~/images/nuuus/nuuus_excalidraw_step1.png"
-      alt="An scheme showing the timeline of the project. Highlighted is step 1: Research"
-    />  
-    <span slot="caption">Step 1: Research</span>
-</image-inline> -->
-
-<!-- <article-meta>
-  <span slot="name">Duration</span>
-  <span slot="content">2 weeks</span>
-</article-meta> -->
-
-<!-- <article-grid :start="9" :end="13"> -->
-
-<!-- <article-video id="Cwzfg-WiTuU" type="youtube" /> -->
-
-<!-- Content :: START -->
-
 <article-grid>
 
 ## The brief

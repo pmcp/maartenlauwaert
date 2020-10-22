@@ -28,8 +28,21 @@ module.exports = {
           cards: {
             typeName: 'Card'
           }
-        },
-        // plugins: ['remark-toc'],
+        }
+      }
+    },
+    {
+      use: '@gridsome/vue-remark',
+      options: {
+        typeName: 'MainPage', // Required
+        baseDir: './content/pages', // Where .md files are located
+        // pathPrefix: '/pages', // Add route prefix. Optional
+        template: './src/templates/Page.vue', // Optional
+        refs: {
+          cards: {
+            typeName: 'Card'
+          }
+        }
       }
     },
     {

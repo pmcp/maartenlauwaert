@@ -22,7 +22,6 @@
 export default {
 computed: {
   captionPassed() {
-    console.log(this.$slots.caption )
     if(this.$slots.caption === undefined) return false
     return true;
   }

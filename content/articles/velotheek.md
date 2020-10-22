@@ -1,41 +1,31 @@
 ---
 title: 'Velotheek: A Bike Renting Platform For Schools'
+type: 'case'
+meta: 
+  slug: velotheek
+  button: 'Ride this way'
+  summary: 'Creating a bike app'
 cards:
   - provelo
   - test
-toc:
-- name: The Brief
-  id: the-brief 
-- name: 'Step 1: Research'
-  id: step-1-research
-
-- name: 'Step 2: Decision Tree'
-  id: step-2-decision-tree
-
-- name: 'Step 3: Wireframing'
-  id: step-3-wireframing
-
-- name: 'Step 4: Click Prototype'
-  id: step-4-click-prototype
-
-- name: 'Step 5: MVP'
-  id: step-5-mvp
-
-- name: 'Step 6: Live Beta'
-  id: step-6-live-beta
-
-- name: 'Step 7 : Learnings'
-  id: step-7-and-beyond-analyse--lessons-learned
+contents:
+  - name: The Brief
+    id: the-brief 
+  - name: 'Step 1: Research'
+    id: step-1-research
+  - name: 'Step 2: Decision Tree'
+    id: step-2-decision-tree
+  - name: 'Step 3: Wireframing'
+    id: step-3-wireframing
+  - name: 'Step 4: Click Prototype'
+    id: step-4-click-prototype
+  - name: 'Step 5: MVP'
+    id: step-5-mvp
+  - name: 'Step 6: Live Beta'
+    id: step-6-live-beta
+  - name: 'Step 7 : Learnings'
+    id: step-7-and-beyond-analyse--lessons-learned
 ---
-
-<!-- Components :: START -->
-import cardInline from '~/components/cardInline.vue'
-import imageInline from '~/components/imageInline.vue'
-import articleMeta from '~/components/articleMeta.vue'
-import articleGrid from '~/components/articleGrid.vue'
-<!-- Components :: END -->
-
-<!-- Content :: START -->
 <article-grid :prose="true">
 
 ## The brief

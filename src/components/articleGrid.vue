@@ -30,7 +30,6 @@ export default {
     gridClasses() {
       let prose = [];
       let gridClasses = [];
-      console.log(this.start,  this.end, this.span)
       if(this.prose) prose = ['prose', 'prose-base'];
       if(this.start !== null && this.span === null) {
         gridClasses = [`sm:col-start-${this.start}`, `sm:col-end-${this.end}`]

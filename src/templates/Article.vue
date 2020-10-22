@@ -1,16 +1,22 @@
 <template>
   <Layout>
-      <h1
-        v-html="$page.article.title"
-        class="px-4 sm:px-0 container mx-auto mt-2 mb-6 sm:mb-14 font-extrabold tracking-tight text-gray-900 text-3xl sm:text-5xl leading-snug sm:leading-tight"
-      ></h1>
+    <h1
+      v-html="$page.article.title"
+      class="px-4 sm:px-0 container mx-auto mt-2 mb-6 sm:mb-14 font-extrabold tracking-tight text-gray-900 text-3xl sm:text-5xl leading-snug sm:leading-tight"
+    ></h1>
 
-      <div class="px-4 sm:px-0 flex flex-col sm:flex-row sm:pb-8 container mx-auto">
-        <div class="w-full lg:w-1/4 mb-4 sm:mb-0  " v-if="isTOCActive || isCardsActive" >
-          <div class="sticky top-5 ">
-            <div class="h-auto sm:h-screen overflow-y-scroll">
-            <scrollactive active-class="animated-underline--active" v-if="isTOCActive">
-              
+    <div class="px-4 sm:px-0 flex flex-col sm:flex-row sm:pb-8 container mx-auto mb-28">
+      <div
+        class="w-full lg:w-1/4 mb-4 sm:mb-0  "
+        v-if="isTOCActive || isCardsActive"
+      >
+        <div class="sticky top-5 ">
+          <div class="h-auto sm:h-screen overflow-y-scroll">
+            <scrollactive
+              active-class="animated-underline--active"
+              v-if="isTOCActive"
+            >
+
               <h3 class="text-2xl sm:text-xl font-bold text-gray-800 sm:text-gray-500 tracking-tight pb-5 sm:pb-0">
                 Chapters
               </h3>
@@ -48,39 +54,38 @@
               </div>
               <!-- <side-info :activeCard="infoId" ></side-info> -->
             </div>
-            </div>    
           </div>
         </div>
-        
-        <VueRemarkContent
-          class="flex-grow grid grid-cols-12 gap-8 "
-          v-if="isTOCActive || isCardsActive"
-        />
-        <div v-else>
-          <VueRemarkContent class="flex-grow grid grid-cols-12 gap-8 " />
-        </div>
-        
+      </div>
 
+      <VueRemarkContent
+        class="flex-grow grid grid-cols-12 gap-8 "
+        v-if="isTOCActive || isCardsActive"
+      />
+      <div v-else>
+        <VueRemarkContent class="flex-grow grid grid-cols-12 gap-8 " />
+      </div>
+
+      <div
+        class="leading-loose sm:hidden pl-4 mt-9 py-4 bg-gray-100"
+        v-if="isCardsActive"
+      >
+        <h3 class="text-xl font-bold text-gray-800 tracking-tight ">
+          Glossary
+        </h3>
         <div
-          class="leading-loose sm:hidden pl-4 mt-9 py-4 bg-gray-100"
-          v-if="isCardsActive"
+          v-for="(card, id) in $page.article.cards"
+          :key="id"
         >
-          <h3 class="text-xl font-bold text-gray-800 tracking-tight ">
-            Glossary
-          </h3>
-          <div
-            v-for="(card, id) in $page.article.cards"
-            :key="id"
-          >
-            <card
-              class="text-gray-800"
-              :card="card"
-            ></card>
-          </div>
+          <card
+            class="text-gray-800"
+            :card="card"
+          ></card>
         </div>
-        <!-- </div> -->
+      </div>
+      <!-- </div> -->
 
-        <!-- 
+      <!-- 
         <div class="w-1/6 pl-5">
           <div class="sticky top-5">
             <h3 class="text-xl font-bold text-gray-400 tracking-tight">
@@ -103,7 +108,7 @@
         </div>
        -->
 
-      </div>
+    </div>
 
   </Layout>
 
@@ -178,21 +183,24 @@ export default {
   },
   computed: {
     isTOCActive() {
-      return (this.$page.article.contents && this.$page.article.contents.length > 0 )
+      return (
+        this.$page.article.contents && this.$page.article.contents.length > 0
+      );
     },
-        isCardsActive() {
-      return (this.$page.article.cards && this.$page.article.cards.length > 0 )
-    }
+    isCardsActive() {
+      return this.$page.article.cards && this.$page.article.cards.length > 0;
+    },
   },
   created() {
-    if(this.isCardsActive ) window.addEventListener('scroll', this.handleScroll)
+    if (this.isCardsActive)
+      window.addEventListener("scroll", this.handleScroll);
 
     EventBus.$on("setActiveCardId", (cardId) => {
       this.activeCardId = cardId;
     });
   },
   beforeDestroy() {
-    window.removeEventListener('scroll', this.handleScroll, false)
-  }
+    window.removeEventListener("scroll", this.handleScroll, false);
+  },
 };
 </script>

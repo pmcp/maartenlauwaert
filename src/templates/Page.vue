@@ -7,7 +7,7 @@
       ></h1>
 
 
-      <div class="px-4 sm:px-0 flex flex-col sm:flex-row sm:pb-8 container mx-auto">
+      <div class="mb-28 px-4 sm:px-0 flex flex-col sm:flex-row sm:pb-8 container mx-auto">
         <div
           class="w-full lg:w-1/4 mb-4 sm:mb-0 "
           v-if="isTOCActive || isCardsActive"

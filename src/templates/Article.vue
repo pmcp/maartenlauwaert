@@ -169,17 +169,17 @@ export default {
       this.activeCardId = cardId;
       EventBus.$emit("setActiveCardIdFromSidebar", cardId);
     },
-    handleScroll: function (evt, el) {
-      if (this.activeCardId === null) {
-        return;
-      }
-      if (global.scrollY > this.scrollPos + this.scrollTreshold) {
-        console.log("test");
-        this.activeCardId = null;
-        this.scrollPos = global.scrollY;
-      }
-      return;
-    },
+    // handleScroll: function (evt, el) {
+    //   if (this.activeCardId === null) {
+    //     return;
+    //   }
+    //   if (window.scrollY > this.scrollPos + this.scrollTreshold) {
+        
+    //     this.activeCardId = null;
+    //     this.scrollPos = window.scrollY;
+    //   }
+    //   return;
+    // },
   },
   computed: {
     isTOCActive() {
@@ -192,15 +192,15 @@ export default {
     },
   },
   created() {
-    if (this.isCardsActive)
-      global.addEventListener("scroll", this.handleScroll);
+    // if (this.isCardsActive && process.isClient)
+    //   window.addEventListener("scroll", this.handleScroll);
 
     EventBus.$on("setActiveCardId", (cardId) => {
       this.activeCardId = cardId;
     });
   },
   beforeDestroy() {
-    global.removeEventListener("scroll", this.handleScroll, false);
+    window.removeEventListener("scroll", this.handleScroll, false);
   },
 };
 </script>

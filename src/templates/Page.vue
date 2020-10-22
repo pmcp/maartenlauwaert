@@ -170,20 +170,20 @@ export default {
       this.activeCardId = cardId;
       EventBus.$emit("setActiveCardIdFromSidebar", cardId);
     },
-    handleScroll: function (evt, el) {
-      // If no cards, don't use the whole scrolling thing
-      if (this.activeCardId === null) {
-        return;
-      }
-      if (global.scrollY > this.scrollPos + this.scrollTreshold) {
-        this.activeCardId = null;
-        this.scrollPos = global.scrollY;
-      }
-      return;
-    },
+    // handleScroll: function (evt, el) {
+    //   // If no cards, don't use the whole scrolling thing
+    //   if (this.activeCardId === null) {
+    //     return;
+    //   }
+    //   if (window.scrollY > this.scrollPos + this.scrollTreshold) {
+    //     this.activeCardId = null;
+    //     this.scrollPos = window.scrollY;
+    //   }
+    //   return;
+    // },
   },
   created() {
-    if(this.isCardsActive ) global.addEventListener('scroll', this.handleScroll)
+    // if(this.isCardsActive ) window.addEventListener('scroll', this.handleScroll)
 
     EventBus.$on("setActiveCardId", (cardId) => {
       console.log('eventbus')
@@ -191,7 +191,7 @@ export default {
     });
   },
   beforeDestroy() {
-    global.removeEventListener('scroll', this.handleScroll, false)
+    window.removeEventListener('scroll', this.handleScroll, false)
   }
 };
 </script>

@@ -111,8 +111,6 @@ export default {
       return this.$static.cards.edges.filter((card) => this.id === card.node.id)[0].node;
     },
     lineHeight(){
-
-      console.log(this.$refs.sum)
       return { marginBottom: '4rem' }
     }
   },

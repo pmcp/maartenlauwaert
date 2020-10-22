@@ -80,9 +80,23 @@ export default {
     card,
     // cardInline,
   },
+  methods: {
+    // handleScroll: function (evt, el) {
+    //   console.log('here')
+    //   if (this.activeCardId === null) {
+    //     return;
+    //   }
+    //   if (window.scrollY > this.scrollPos + this.scrollTreshold) {
+    
+    //     this.activeCardId = null;
+    //     this.scrollPos = window.scrollY;
+    //   }
+    //   return;
+    // },
+  },
   created() {
-    if (this.isCardsActive)
-      global.addEventListener("scroll", this.handleScroll);
+    // if (this.isCardsActive && process.isClient)
+    //   window.addEventListener("scroll", this.handleScroll);
 
     EventBus.$on("setActiveCardId", (cardId) => {
       this.activeCardId = cardId;

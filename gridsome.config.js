@@ -36,7 +36,7 @@ module.exports = {
       options: {
         typeName: 'MainPage', // Required
         baseDir: './content/pages', // Where .md files are located
-        // pathPrefix: '/pages', // Add route prefix. Optional
+        // pathPrefix: '/', // Add route prefix. Optional
         template: './src/templates/Page.vue', // Optional
         refs: {
           cards: {

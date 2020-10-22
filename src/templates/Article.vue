@@ -1,8 +1,5 @@
 <template>
   <Layout>
-    <div
-      v-scroll="handleScroll"
-    >
       <h1
         v-html="$page.article.title"
         class="px-4 sm:px-0 container mx-auto mt-2 mb-6 sm:mb-14 font-extrabold tracking-tight text-gray-900 text-3xl sm:text-5xl leading-snug sm:leading-tight"
@@ -107,7 +104,6 @@
        -->
 
       </div>
-    </div>
 
   </Layout>
 
@@ -169,8 +165,6 @@ export default {
       EventBus.$emit("setActiveCardIdFromSidebar", cardId);
     },
     handleScroll: function (evt, el) {
-      // If no cards, don't use the whole scrolling thing
-      if(!this.isCardsActive) return;
       if (this.activeCardId === null) {
         return;
       }
@@ -191,9 +185,14 @@ export default {
     }
   },
   created() {
+    if(this.isCardsActive ) window.addEventListener('scroll', this.handleScroll)
+
     EventBus.$on("setActiveCardId", (cardId) => {
       this.activeCardId = cardId;
     });
   },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll, false)
+  }
 };
 </script>

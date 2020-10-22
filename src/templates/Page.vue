@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div v-scroll="handleScroll">
+    <div >
       <h1
         v-html="$page.page.title"
         class="px-4 sm:px-0 container mx-auto mt-2 mb-6 sm:mb-14 font-extrabold tracking-tight text-gray-900 text-3xl sm:text-5xl leading-snug sm:leading-tight"
@@ -162,7 +162,6 @@ export default {
       return (this.$page.page.contents && this.$page.page.contents.length > 0)
     },
     isCardsActive() {
-      
       return (this.$page.page.cards !== null );
     },
   },
@@ -173,12 +172,10 @@ export default {
     },
     handleScroll: function (evt, el) {
       // If no cards, don't use the whole scrolling thing
-      if(!this.isCardsActive) return;
       if (this.activeCardId === null) {
         return;
       }
       if (window.scrollY > this.scrollPos + this.scrollTreshold) {
-        console.log("test");
         this.activeCardId = null;
         this.scrollPos = window.scrollY;
       }
@@ -186,10 +183,15 @@ export default {
     },
   },
   created() {
-    console.log(this.$page.page.title);
+    if(this.isCardsActive ) window.addEventListener('scroll', this.handleScroll)
+
     EventBus.$on("setActiveCardId", (cardId) => {
+      console.log('eventbus')
       this.activeCardId = cardId;
     });
   },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll, false)
+  }
 };
 </script>

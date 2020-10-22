@@ -32,17 +32,19 @@ export default function (Vue, { router, head, isClient }) {
 
 
 
-  // Scroll Directive (https://vuejs.org/v2/cookbook/creating-custom-scroll-directives.html)
-  Vue.directive('scroll', {
-    inserted: function (el, binding) {
-      let f = function (evt) {
-        if (binding.value(evt, el)) {
-          window.removeEventListener('scroll', f)
-        }
-      }
-      window.addEventListener('scroll', f)
-    }
-  })
+  // // Scroll Directive (https://vuejs.org/v2/cookbook/creating-custom-scroll-directives.html)
+  // Vue.directive('scroll', {
+  //   inserted: function (el, binding) {
+  //     let f = function (evt) {
+  //       console.log('here1', el)
+  //       if (binding.value(evt, el)) {
+  //         console.log('here2')
+  //         window.removeEventListener('scroll', f)
+  //       }
+  //     }
+  //     window.addEventListener('scroll', f)
+  //   }
+  // })
 
   // Scrollactive library: https://github.com/eddiemf/vue-scrollactive
   Vue.use(VueScrollactive);

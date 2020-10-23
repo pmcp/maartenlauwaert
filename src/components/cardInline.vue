@@ -10,7 +10,7 @@
         <a
         :href="theCard.url"
         target="_blank"
-        v-if="theCard.type == 'link'"
+        v-if="theCard.url.length > 0"
       >
       {{ theCard.url }}
         <!-- Heroicon name: external-link -->
@@ -47,7 +47,7 @@
       <a
         :href="theCard.url"
         target="_blank"
-        v-if="theCard.type == 'link'"
+        v-if="theCard.url.length > 0"
       >
         <!-- Heroicon name: external-link -->
         <svg
@@ -79,11 +79,10 @@
       edges {
         node {
           id
-          type
           name
           descr
           url
-          type
+          cat
           cover
         }
       }	

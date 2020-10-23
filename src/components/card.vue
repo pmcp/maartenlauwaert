@@ -13,12 +13,13 @@
           italic">
       {{ card.descr }}
     </div>
+    
     <div
-      v-if="card.type == 'link'"
+      v-if="card.url.length > 0"
       class="mb-4 "
     >
       <svg
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns="http://wwwz.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -41,21 +42,6 @@
     <div class="border-b border-gray-300 mb-2 px-4"></div>
   </details>
 </template>
-
-<static-query>
-  query {
-    cards: allCard {
-      edges {
-        node {
-          id
-          url
-          type
-          cover
-        }
-      }	
-    }
-  }
-</static-query>
 
 <script>
 export default {

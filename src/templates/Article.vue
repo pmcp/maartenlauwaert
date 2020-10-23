@@ -128,7 +128,6 @@ query ($id: ID!) {
       name
       url
       cat
-      type
       cover
       descr
       name

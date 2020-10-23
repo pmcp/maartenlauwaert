@@ -65,8 +65,7 @@
         node {
           id
           name
-          url
-          type
+          urls
           cover
         }
       }	

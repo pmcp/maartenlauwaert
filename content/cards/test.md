@@ -2,8 +2,7 @@
 id: test
 name: Streamlined Process
 url: https://www.provelo.org
-cat: partner
-type: link
+cat: tool
 cover: provelo.png
 descr: Pro Velo promotes bicycling in Brussels.
 ---

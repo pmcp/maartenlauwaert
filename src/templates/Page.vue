@@ -5,8 +5,6 @@
         v-html="$page.page.title"
         class="px-4 sm:px-0 container mx-auto mt-2 mb-6 sm:mb-14 font-extrabold tracking-tight text-gray-900 text-3xl sm:text-5xl leading-snug sm:leading-tight"
       ></h1>
-
-
       <div class="mb-28 px-4 sm:px-0 flex flex-col sm:flex-row sm:pb-8 container mx-auto">
         <div
           class="w-full lg:w-1/4 mb-4 sm:mb-0 "
@@ -24,7 +22,7 @@
                 <ul class="sticky top-0 text-sm leading-loose text-gray-400 capitalize pb-8 list-disc sm:list-none px-4 sm:px-0 ">
 
                   <li
-                    v-for="(i,id) in $page.page.contents"
+                    v-for="(i,id) in $page.page.toc"
                     :key="id"
                   >
                     <a
@@ -126,6 +124,10 @@ query ($id: ID!) {
     cards {
       id
     }
+    toc {
+      name
+      id
+    }
   }
 }
 </page-query>
@@ -159,7 +161,8 @@ export default {
   },
   computed: {
     isTOCActive() {
-      return (this.$page.page.contents && this.$page.page.contents.length > 0)
+      console.log(this.$page.page.toc)
+      return (this.$page.page.toc && this.$page.page.toc.length > 0)
     },
     isCardsActive() {
       return (this.$page.page.cards !== null );

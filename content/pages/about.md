@@ -1,7 +1,9 @@
 ---
 title: 'About me'
-summary: 'Creating an news app'
+meta:
+  summary: 'Creating an news app'
 cards:
+toc:
 ---
 <article-grid :prose="true">
 

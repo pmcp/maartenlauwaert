@@ -23,7 +23,7 @@
               <ul class="sticky top-0 text-sm leading-loose text-gray-400 capitalize pb-8 list-disc sm:list-none px-4 sm:px-0 ">
 
                 <li
-                  v-for="(i,id) in $page.article.contents"
+                  v-for="(i,id) in $page.article.toc"
                   :key="id"
                 >
                   <a
@@ -119,7 +119,7 @@ query ($id: ID!) {
   article(id: $id) {
     title
     content
-    contents {
+    toc {
       name
       id
     }
@@ -184,7 +184,7 @@ export default {
   computed: {
     isTOCActive() {
       return (
-        this.$page.article.contents && this.$page.article.contents.length > 0
+        this.$page.article.toc && this.$page.article.toc.length > 0
       );
     },
     isCardsActive() {

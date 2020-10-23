@@ -13,6 +13,7 @@ import cardInline from '~/components/cardInline.vue'
 import imageInline from '~/components/imageInline.vue'
 import articleMeta from '~/components/articleMeta.vue'
 import articleGrid from '~/components/articleGrid.vue'
+import articleVideo from '~/components/articleVideo.vue'
 
 
 
@@ -27,6 +28,7 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('imageInline', imageInline),
   Vue.component('articleMeta', articleMeta),
   Vue.component('articleGrid', articleGrid),
+  Vue.component('articleVideo', articleVideo),
 
 
 

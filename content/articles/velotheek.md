@@ -8,7 +8,7 @@ meta:
 cards:
   - provelo
   - test
-contents:
+toc:
   - name: The Brief
     id: the-brief 
   - name: 'Step 1: Research'

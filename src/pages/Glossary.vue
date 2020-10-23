@@ -6,17 +6,22 @@
       <h2 class="text-3xl font-bold text-gray-800 tracking-tight pb-7 capitalize">Tools</h2>
       <div class="grid gap-16 pt-10 lg:gap-x-5 lg:gap-y-12">
 
-  
+        <ul class="flex">
+          <li
+            class="mr-3"
+            v-for="(cat, id) in categories"
+            :key="id"
+          >
+            <button
+              @click="toggleCat(id)"
+              class="bg-gray-100 group  text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
+              :class="{'bg-accent': cat.active}"
+            >
+              <span class="capitalize">{{ id }} <span class="font-medium ">({{cat.total}})</span></span>
+            </button>
+          </li>
 
-
-<ul class="flex">
-  <li class="mr-3" v-for="(cat, id) in categories" :key="id" >
-    <button @click="toggleCat(id)" class="bg-gray-100 group  text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center" :class="{'bg-accent': cat.active}">
-       <span class="capitalize">{{ id }} <span class="font-medium ">({{cat.total}})</span> {{cat.active}}</span>
-        </button>
-  </li>
-  
-</ul>
+        </ul>
         <div
           v-for="(card, id) in filteredCards()"
           :key="id"
@@ -66,37 +71,34 @@ export default {
     categories() {
       return this.$page.allCard.edges.reduce((acc, item) => {
         if (acc[item.node.cat]) {
-          acc[item.node.cat].total ++;
+          acc[item.node.cat].total++;
         } else {
           acc[item.node.cat] = {
-            total:1,
-            active: true
-          }
+            total: 1,
+            active: true,
+          };
         }
         return acc;
       }, {});
-    }
+    },
   },
   methods: {
-    filteredCards(){
-      return this.$page.allCard.edges.filter(card => {        
-        return this.categories[card.node.cat].active
-      })
+    filteredCards() {
+      return this.$page.allCard.edges.filter((card) => {
+        return this.categories[card.node.cat].active;
+      });
     },
     toggleCat(id) {
-      
       // console.log(this.categories)
-      const cat = this.categories[id]
+      const cat = this.categories[id];
       // console.log(cat)
-      const updatedCat = {...cat, 'active': !cat['active']}
+      const updatedCat = { ...cat, active: !cat["active"] };
       this.$set(this.categories, id, updatedCat);
-      this.$forceUpdate() //TODO: Fix this, seems not ok
-
-
-    }
+      this.$forceUpdate(); //TODO: Fix this, seems not ok
+    },
   },
   components: {
     card,
-  }
+  },
 };
 </script>

@@ -11,7 +11,7 @@
           <!-- <p class="text-sm leading-5 text-gray-500">
           <time datetime="2020-03-10">Mar 10, 2020</time>
         </p> -->
-          <g-link
+          <!-- <g-link
             :to="`/articles/${i.node.meta.slug}`"
             class="block"
           >
@@ -29,7 +29,7 @@
             >
               {{ i.node.meta.button }}
             </g-link>
-          </div>
+          </div> -->
         </div>
 
       </div>

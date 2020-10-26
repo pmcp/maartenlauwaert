@@ -11,7 +11,7 @@
           <h3 class="text-2xl font-bold text-gray-800 tracking-tight">
             Confidently decide what to do next
           </h3>
-          <p class="contents ">
+          <!-- <p class="contents ">
             You don't
             <card-inline id="provelo">Pro Velo</card-inline> need a fully working app to test what works or doesn't. I turn ideas into something you can put in
             <card-inline id="test">Test</card-inline> front of real people. This can be a <button
@@ -19,7 +19,7 @@
               class="underline"
               @mouseover="defId = 'testId'"
             >simple clickable design</button>, a working application or a small tweak to an existing product. I try to minimize effort and maximize learnings.
-          </p>
+          </p> -->
         </div>
       </div>
       <div class="col-span-2 col-start-5 hidden sm:block ">

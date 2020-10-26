@@ -2,7 +2,7 @@
   <Layout>
     <intro></intro>
     <hero></hero>
-    <!-- <how-i-work></how-i-work> -->
+    <how-i-work></how-i-work>
     <cases :cases="$page.allArticle.edges"></cases>
   </Layout>
 </template>

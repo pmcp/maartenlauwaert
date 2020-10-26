@@ -1,7 +1,7 @@
 <template>
   <span>
-    <span>
-      <details class="inline sm:hidden">
+    <span class="inline sm:hidden">
+      <details>
         <summary class="highlight cursor-help underline" :style="lineHeight">
           <slot></slot>
         </summary>

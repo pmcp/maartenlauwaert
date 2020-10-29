@@ -1,17 +1,15 @@
 <template>
   <span>
-    <span class="inline sm:hidden">
-      <details>
-        <summary
-          class="highlight cursor-help underline"
-          :style="lineHeight"
-        >
-          <slot></slot>
-        </summary>
+    <span class="inline sm:hidden relative">
+      <button @click="toggleCard" ref="cardButton" :style="lineHeight" class="transition-all duration-300 ease-in-out">
+        <span class="text-gray-800 cursor-help highlight underline prose prose-base" ><slot></slot></span>
+      </button>
         <div
-          ref="sum"
-          class="absolute left-0 shadow-inner w-full bg-white px-4 py-6"
+          class=" left-0 shadow-inner w-screen bg-gray-100 px-4 py-6 absolute transition-opacity duration-300 ease-in-out"
+          ref="cardOpened"
+          :style="styleCard"
         >
+        
           <span class="mt-0 mb-0">{{theCard.descr}}</span>
           <a
             :href="theCard.url"
@@ -38,7 +36,6 @@
 
           </a>
         </div>
-      </details>
     </span>
     <span
       @mouseover="setActiveCardId(id)"
@@ -104,6 +101,11 @@ export default {
   data() {
     return {
       active: false,
+      offset: 0,
+      zIndex: -1,
+      opacity: 0,
+      height: 0,
+      top: 0
     };
   },
   props: {
@@ -113,16 +115,46 @@ export default {
     },
   },
   computed: {
+    styleCard(){
+      // console.log(this.positionX,  -this.positionX + 'px')
+      return {
+        opacity: this.opacity,
+        zIndex: this.zIndex,
+        left: -this.offset+18+ 'px',
+        top: this.top+'rem'
+      }
+    },
     theCard() {
       return this.$static.cards.edges.filter(
         (card) => this.id === card.node.id
       )[0].node;
     },
     lineHeight() {
-      return { marginBottom: "4rem" };
+      console.log(this.height)
+      // console.log(this.height)
+      return { marginBottom: this.height+'px'};
     },
   },
   methods: {
+    toggleCard(event) {
+    // console.log(this.$refs.cardOpened.clientHeight)
+      this.active = !this.active;
+      if(this.active) {
+        this.opacity = 1;
+        this.offset = event.x;
+        this.zIndex = 1;
+        this.top = 1.5;
+        this.height = this.$refs.cardOpened.clientHeight;
+
+      } else {
+        this.opacity = 0;
+        this.top = 0;
+        this.offset = event.x;
+        this.zIndex = -1;
+        this.height = 0;
+      }
+      
+    },
     setActiveCardId(card) {
       if (card == null) {
         this.active = false;

@@ -105,7 +105,7 @@ export default {
       zIndex: -1,
       opacity: 0,
       height: 0,
-      top: 0
+      top: 1.5
     };
   },
   props: {
@@ -130,8 +130,7 @@ export default {
       )[0].node;
     },
     lineHeight() {
-      console.log(this.height)
-      // console.log(this.height)
+      
       return { marginBottom: this.height+'px'};
     },
   },
@@ -143,12 +142,10 @@ export default {
         this.opacity = 1;
         this.offset = event.x;
         this.zIndex = 1;
-        this.top = 1.5;
         this.height = this.$refs.cardOpened.clientHeight;
 
       } else {
         this.opacity = 0;
-        this.top = 0;
         this.offset = event.x;
         this.zIndex = -1;
         this.height = 0;

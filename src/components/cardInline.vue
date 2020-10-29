@@ -120,7 +120,7 @@ export default {
       return {
         opacity: this.opacity,
         zIndex: this.zIndex,
-        left: -this.offset+18+ 'px',
+        left: -this.offset+16+ 'px',
         top: this.top+'rem'
       }
     },

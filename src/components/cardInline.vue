@@ -2,10 +2,10 @@
   <span>
     <span class="inline sm:hidden relative">
       <button @click="toggleCard" ref="cardButton" :style="lineHeight" class="transition-all duration-300 ease-in-out">
-        <span class="text-gray-800 cursor-help highlight underline prose prose-base" ><slot></slot></span>
+        <span class="text-gray-800 cursor-help highlight underline prose prose-base"><slot></slot></span>
       </button>
         <div
-          class=" left-0 shadow-inner w-screen bg-gray-100 px-4 py-6 absolute transition-opacity duration-300 ease-in-out"
+          class="   left-0 shadow-inner w-screen bg-gray-100  px-4 py-6 absolute transition-opacity duration-300 ease-in-out"
           ref="cardOpened"
           :style="styleCard"
         >
@@ -105,7 +105,9 @@ export default {
       zIndex: -1,
       opacity: 0,
       height: 0,
-      top: 1.5
+      top: 1.5,
+      left: 1000,
+      width: 0,
     };
   },
   props: {
@@ -118,9 +120,10 @@ export default {
     styleCard(){
       // console.log(this.positionX,  -this.positionX + 'px')
       return {
+        // width: this.width+'vw',
         opacity: this.opacity,
         zIndex: this.zIndex,
-        left: -this.offset+16+ 'px',
+        left: -this.offset  + 'px',
         top: this.top+'rem'
       }
     },
@@ -130,18 +133,20 @@ export default {
       )[0].node;
     },
     lineHeight() {
-      
       return { marginBottom: this.height+'px'};
     },
   },
   methods: {
     toggleCard(event) {
+      console.log(event.target.getBoundingClientRect().top);
+
     // console.log(this.$refs.cardOpened.clientHeight)
       this.active = !this.active;
       if(this.active) {
         this.opacity = 1;
-        this.offset = event.x;
+        this.offset = event.target.getBoundingClientRect().left;
         this.zIndex = 1;
+        this.width = 100
         this.height = this.$refs.cardOpened.clientHeight;
 
       } else {
@@ -149,6 +154,7 @@ export default {
         this.offset = event.x;
         this.zIndex = -1;
         this.height = 0;
+        this.width = 0;
       }
       
     },

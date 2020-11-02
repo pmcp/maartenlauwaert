@@ -15,7 +15,7 @@
       @mouseover="hoveringInfo = true"
       @mouseleave="hoveringInfo = false"
     >
-    {{ '~/images/links/'+l.node.cover }}
+    {{ '~/images/cards/'+l.node.cover }}
    <a
         :href="l.node.url"
         target="_blank"
@@ -23,7 +23,7 @@
         <div class="max-w-sm rounded overflow-hidden shadow-inner p-1 leading-snug group bg-white">
           <img
             class="w-full group-hover:bg-gray-800 hover:shadowtransition duration-500 ease-in-out"
-            :src="'~/images/links/'+l.node.cover"
+            :src="'~/images/cards/'+l.node.cover"
             alt="A screenshot of the website of the organisation Pro Velo"
             width="200"
           />
@@ -89,7 +89,7 @@ export default {
   //   },
   //   img(){
   //     if(this.active === null) return;
-  //     return '~/images/links/provelo.png'
+  //     return '~/images/cards/provelo.png'
   //   }
   // }, 
 };

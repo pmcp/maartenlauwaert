@@ -57,7 +57,7 @@ module.exports = {
   ],
   // This makes dynamic images work
   chainWebpack: config => {
-    config.resolve.alias.set('@links', '@/images/links')
+    config.resolve.alias.set('@links', '@/images/cards')
   },
 
   transformers: {

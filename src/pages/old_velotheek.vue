@@ -84,7 +84,7 @@
                   <div class="max-w-sm rounded overflow-hidden shadow-inner p-1 leading-snug group bg-white">
                     <g-image
                       class="w-full group-hover:bg-gray-800 hover:shadowtransition duration-500 ease-in-out"
-                      src="~/images/links/provelo.png"
+                      src="~/images/cards/provelo.png"
                       alt="A screenshot of the website of the organisation Pro Velo"
                       width="200"
                     />

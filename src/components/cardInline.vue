@@ -2,7 +2,7 @@
   <span>
     <span class="inline sm:hidden relative">
       <button @click="toggleCard" ref="cardButton" :style="lineHeight" class="transition-all duration-300 ease-in-out">
-        <span class="text-gray-800 cursor-help highlight underline prose prose-base"><slot></slot></span>
+        <span class="text-gray-800 cursor-help highlight underline "><slot></slot></span>
       </button>
         <div
           class="   left-0 shadow-inner w-screen bg-gray-100  px-4 py-6 absolute transition-opacity duration-300 ease-in-out"
@@ -11,10 +11,11 @@
         >
         
           <span class="mt-0 mb-0">{{theCard.descr}}</span>
+       
           <a
             :href="theCard.url"
             target="_blank"
-            v-if="theCard.url.length > 0"
+            v-if="theCard.url.length > 0 && urlInline"
           >
             {{ theCard.url }}
             <!-- Heroicon name: external-link -->
@@ -43,7 +44,7 @@
       class="text-gray-800 cursor-help hidden sm:inline "
     >
       <span
-        class="highlight underline prose prose-base"
+        class="highlight underline "
         :class="{'highlight--active': active}"
       >
         <slot></slot>
@@ -51,7 +52,7 @@
       <a
         :href="theCard.url"
         target="_blank"
-        v-if="theCard.url.length > 0"
+        v-if="theCard.url.length > 0 && urlInline"
       >
         <!-- Heroicon name: external-link -->
         <svg
@@ -114,6 +115,10 @@ export default {
     id: {
       type: String,
       default: null,
+    },
+    urlInline: {
+      type: Boolean,
+      default: true,
     },
   },
   computed: {

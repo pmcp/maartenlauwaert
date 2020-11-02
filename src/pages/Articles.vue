@@ -8,7 +8,7 @@
         <div
           v-for="(i, id) in $page.allArticle.edges"
           :key="id"
-          class="shadow p-6"
+          class="border-solid border-2 border-gray-500 p-6"
         >
           <case-link :content="i.node"></case-link>
         </div>

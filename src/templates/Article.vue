@@ -16,7 +16,7 @@
               active-class="animated-underline--active"
               v-if="isTOCActive"
             >
-              <div class="bg-gray-100 rounded p-2 mb-5 shadow ">
+              <div class="border-solid border-2 border-gray-500 rounded p-2 mb-5 shadow-lg ">
                 <h3 class="text-2xl sm:text-xl font-bold text-gray-800 sm:text-gray-600 tracking-tight py-5 sm:py-3 ">
                   Chapters
                 </h3>
@@ -37,7 +37,7 @@
               </div>
             </scrollactive>
             <div
-              class="leading-loose hidden sm:block bg-gray-100 rounded p-2 pb-5 shadow"
+              class="leading-loose hidden sm:block border-solid border-2 border-gray-500 shadow-lg rounded p-2 pb-5 "
               v-if="isCardsActive"
             >
               <h3 class="text-xl font-bold text-gray-800 sm:text-gray-600 tracking-tight ">

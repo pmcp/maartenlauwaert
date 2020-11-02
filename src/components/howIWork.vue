@@ -61,7 +61,7 @@
       </div>
 
       <div class="h-screen w-3/5 hidden sm:block">
-        <div class="leading-loose bg-gray-100 rounded p-2 pb-5 shadow sticky top-5 ml-10 sm:ml-20 pl-5">
+        <div class="leading-loose border-solid border-2 border-gray-500 rounded p-2 pb-5 shadow-lg sticky top-5 ml-10 sm:ml-20 pl-5">
 
           <h3 class="text-xl font-bold text-gray-500 tracking-tight ">
             Glossary

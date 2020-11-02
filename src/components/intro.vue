@@ -6,7 +6,7 @@
     <h2 class="mt-4  text-base leading-7 text-gray-800  sm:w-2/3 pb-20">
       I help organisations define and decide the next steps for their product or service.
     </h2>
-    <doodle-coffee class="absolute w-1/2 sm:w-1/3 right-0 sm:right-0 "></doodle-coffee>
+    <doodle-coffee class="absolute w-1/2 sm:w-1/3 right-0 sm:right-0 lg:top-20"></doodle-coffee>
   </div>
 </template>
 

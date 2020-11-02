@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto p-6 sm:p-20 relative bg-white mb-20">
+  <div class="container mx-auto p-6 sm:p-15 relative bg-white mb-20">
     
     <h1 class="text-5xl font-bold text-gray-800 tracking-tight pt-7 pb-7 capitalize">Hi, I'm Maarten.</h1>
     

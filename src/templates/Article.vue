@@ -16,11 +16,11 @@
               active-class="animated-underline--active"
               v-if="isTOCActive"
             >
-              <div class="bg-gray-100 rounded p-2 mb-5">
-                <h3 class="text-2xl sm:text-xl font-bold text-gray-800 sm:text-gray-500 tracking-tight py-5 sm:py-3 ">
+              <div class="bg-gray-100 rounded p-2 mb-5 shadow ">
+                <h3 class="text-2xl sm:text-xl font-bold text-gray-800 sm:text-gray-600 tracking-tight py-5 sm:py-3 ">
                   Chapters
                 </h3>
-                <ul class="sticky top-0 text-sm leading-loose text-gray-400 capitalize list-none pb-4 sm:pb-0">
+                <ul class="sticky top-0 text-sm leading-loose text-gray-500 capitalize list-none pb-4 sm:pb-0 mb-4">
 
                   <li
                     v-for="(i,id) in $page.article.toc"
@@ -28,7 +28,7 @@
                   >
                     <a
                       :href="'#'+i.id"
-                      class="scrollactive-item animated-underline"
+                      class="scrollactive-item animated-underline hover:text-gray-800"
                     >
                       {{ i.name }}
                     </a>
@@ -37,10 +37,10 @@
               </div>
             </scrollactive>
             <div
-              class="leading-loose hidden sm:block bg-gray-100 rounded p-2 mb-5"
+              class="leading-loose hidden sm:block bg-gray-100 rounded p-2 pb-5 shadow"
               v-if="isCardsActive"
             >
-              <h3 class="text-xl font-bold text-gray-500 tracking-tight ">
+              <h3 class="text-xl font-bold text-gray-800 sm:text-gray-600 tracking-tight ">
                 Glossary
               </h3>
               <div
@@ -48,7 +48,7 @@
                 :key="id"
               >
                 <card
-                  class="text-gray-400"
+                  class="text-gray-500"
                   :card="card"
                   :active="card.id == activeCardId"
                 ></card>

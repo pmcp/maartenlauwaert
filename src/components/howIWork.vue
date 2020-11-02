@@ -1,8 +1,8 @@
 <template>
-  <div class="container mx-auto p-6 sm:p-15 relative overflow-hidden">
+  <div class="container mx-auto p-6 sm:p-15 overflow-hidden sm:overflow-visible">
     <h2 class="text-3xl font-bold text-gray-800 tracking-tight pb-7 capitalize">How I work</h2>
-    <div class="grid grid-cols-6 gap-8 ">
-      <div class="col-span-full mx-auto container sm:col-span-3">
+    <div class="flex flex-row ">
+      <div class="mx-auto container  flex-grow ">
         <div class="relative pb-8 pt-6 mt-4 mx-auto text-sm leading-7 text-gray-500">
           <h3 class="text-2xl font-bold text-gray-800 tracking-tight">
             Confidently decide what to do next
@@ -59,8 +59,10 @@
         </div>
 
       </div>
-      <div class="col-span-2 col-start-5 hidden sm:block ">
-        <div class="leading-loose sticky top-0 ">
+
+      <div class="h-screen w-3/5 hidden sm:block">
+        <div class="leading-loose bg-gray-100 rounded p-2 pb-5 shadow sticky top-5 ml-10 sm:ml-20 pl-5">
+
           <h3 class="text-xl font-bold text-gray-500 tracking-tight ">
             Glossary
           </h3>
@@ -76,6 +78,7 @@
             ></card>
           </div>
         </div>
+
       </div>
     </div>
   </div>

@@ -7,7 +7,7 @@
 
     <div class="px-6 sm:px-15  flex flex-col sm:flex-row sm:pb-8 container mx-auto mb-28">
       <div
-        class="w-full lg:w-1/4 mb-4 sm:mb-0  "
+        class="w-full  mb-4 sm:mb-0  md:w-1/3"
         v-if="isTOCActive || isCardsActive"
       >
         <div class="sticky top-5 ">

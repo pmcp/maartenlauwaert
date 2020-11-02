@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto p-6 sm:p-15 overflow-hidden sm:overflow-visible shadow-inner">
+  <div class="container mx-auto p-6 sm:p-15 overflow-hidden sm:overflow-visible  bg-white mt-10">
     <h2 class="text-3xl font-bold text-gray-800 tracking-tight pb-7 capitalize">How I work</h2>
     <div class="flex flex-row ">
       <div class="mx-auto container  flex-grow ">

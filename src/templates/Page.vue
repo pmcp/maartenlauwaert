@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div >
+    <div class=" bg-white">
       <h1
         v-html="$page.page.title"
         class="px-6 sm:px-15 container mx-auto mt-2 mb-6 sm:mb-14 font-extrabold tracking-tight text-gray-900 text-3xl sm:text-5xl leading-snug sm:leading-tight"

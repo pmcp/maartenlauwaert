@@ -1,6 +1,6 @@
 <template>
   <span>
-    <span class="inline sm:hidden relative">
+    <span class="inline sm:hidden relative" v-if="theCard !== null">
       <button @click="toggleCard" ref="cardButton" :style="lineHeight" class="transition-all duration-300 ease-in-out">
         <span class="text-gray-800 cursor-help highlight underline "><slot></slot></span>
       </button>
@@ -39,6 +39,7 @@
         </div>
     </span>
     <span
+    v-if="theCard !== null"
       @mouseover="setActiveCardId(id)"
       @mouseleave="setActiveCardId(null)"
       class="text-gray-800 cursor-help hidden sm:inline "
@@ -133,9 +134,12 @@ export default {
       }
     },
     theCard() {
-      return this.$static.cards.edges.filter(
+      const card = this.$static.cards.edges.filter(
         (card) => this.id === card.node.id
-      )[0].node;
+      )[0];
+      if(card == undefined) return null;
+      
+      return card.node;
     },
     lineHeight() {
       return { marginBottom: this.height+'px'};

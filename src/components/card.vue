@@ -7,8 +7,8 @@
       >{{card.name}}</span>
     </summary>
     <div class="
-    leading-snug
-          
+      leading-snug
+pt-5
           text-xs
           italic">
       {{ card.descr }}
@@ -35,14 +35,14 @@
     </div>
     <div
       v-if="card.url.length > 0"
-      class="mb-4 "
+      class="mb-4 text-gray-400  hover:text-gray-500 transition ease-in-out duration-150"
     >
       <svg
         xmln="http://wwwz.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        class=" w-5 h-5  inline text-gray-400 pr-1"
+        class=" w-5 h-5  inline  pr-1"
       >
         <path
           stroke-linecap="round"
@@ -54,7 +54,7 @@
       <a
         :href="card.url"
         target="_blank"
-        class=" hover:text-gray-500 transition ease-in-out duration-150 text-xs hover:underline"
+        class="  text-xs hover:underline"
       >
         <span
           v-if="card.urlButton"
@@ -66,7 +66,7 @@
         >Visit site</span>
       </a>
     </div>
-    <div class="border-b border-gray-300 mb-2 px-4"></div>
+    <div class="border-b border-gray-300 mb-2 px-4 pb-5"></div>
   </details>
 </template>
 

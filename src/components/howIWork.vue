@@ -8,10 +8,10 @@
             Confidently decide what to do next
           </h3>
 
-          <blockquote class="mt-8 md:flex-grow md:flex md:flex-col pl-3">
+          <blockquote class="mt-8 md:flex-grow md:flex md:flex-col pl-3 ">
             <div class="relative md:flex-grow">
               <svg
-                class="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-accent"
+                class="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-gray-200"
                 fill="currentColor"
                 viewBox="0 0 32 32"
               >
@@ -70,7 +70,7 @@
             :key="id"
           >
             <card
-              class="text-gray-400"
+              class="text-gray-500"
               :card="card.node"
               :active="card.node.id == activeCardId"
             ></card>

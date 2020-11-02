@@ -3,9 +3,9 @@
     <div >
       <h1
         v-html="$page.page.title"
-        class="px-4 sm:px-0 container mx-auto mt-2 mb-6 sm:mb-14 font-extrabold tracking-tight text-gray-900 text-3xl sm:text-5xl leading-snug sm:leading-tight"
+        class="px-6 sm:px-15 container mx-auto mt-2 mb-6 sm:mb-14 font-extrabold tracking-tight text-gray-900 text-3xl sm:text-5xl leading-snug sm:leading-tight"
       ></h1>
-      <div class="mb-28 px-4 sm:px-0 flex flex-col sm:flex-row sm:pb-8 container mx-auto">
+      <div class="mb-28 px-6 sm:px-15 flex flex-col sm:flex-row sm:pb-8 container mx-auto">
         <div
           class="w-full lg:w-1/4 mb-4 sm:mb-0 "
           v-if="isTOCActive || isCardsActive"
@@ -19,7 +19,7 @@
                 <h3 class="text-2xl sm:text-xl font-bold text-gray-800 sm:text-gray-500 tracking-tight pb-5 sm:pb-0">
                   Chapters
                 </h3>
-                <ul class="sticky top-0 text-sm leading-loose text-gray-400 capitalize pb-8 list-disc sm:list-none px-4 sm:px-0 ">
+                <ul class="sticky top-0 text-sm leading-loose text-gray-400 capitalize pb-8 list-disc sm:list-none px-6 sm:px-15 ">
 
                   <li
                     v-for="(i,id) in $page.page.toc"

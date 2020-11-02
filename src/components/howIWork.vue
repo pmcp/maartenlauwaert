@@ -1,5 +1,5 @@
 <template>
-  <div class="px-3 sm:px-0 container mx-auto m-15 relative overflow-hidden">
+  <div class="container mx-auto p-6 sm:p-15 relative overflow-hidden">
     <h2 class="text-3xl font-bold text-gray-800 tracking-tight pb-7 capitalize">How I work</h2>
     <div class="grid grid-cols-6 gap-8 ">
       <div class="col-span-full mx-auto container sm:col-span-3">

@@ -8,9 +8,28 @@
         <div
           v-for="(i, id) in $page.allArticle.edges"
           :key="id"
-          class="border-solid border-2 border-gray-500 p-6"
         >
-          <case-link :content="i.node"></case-link>
+          <div class="flex flex-col justify-between h-full border-solid border-2 border-gray-500 p-6 shadow-xl rounded">
+
+            <g-link
+              :to="`/articles/${i.node.meta.slug}`"
+              class="block"
+            >
+              <h3 class="text-xl leading-7 font-semibold text-gray-800">
+                {{ i.node.title }}
+              </h3>
+              <p class="mt-3 text-base leading-6 text-gray-700">
+                {{ i.node.meta.summary }}
+              </p>
+            </g-link>
+            <div class="mt-4">
+              <g-link
+                :to="`/articles/${i.node.meta.slug}`"
+                class="p-2 bg-black text-sm text-white leading-6 hover:bg-accent hover:text-black transition ease-in-out duration-150"
+              >
+                {{ i.node.meta.button }} </g-link>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -36,7 +55,7 @@
   }
 </page-query>
 <script>
-import caseLink from '@/components/caseLink.vue';
+import caseLink from "@/components/caseLink.vue";
 export default {
   metaInfo: {
     title: "Work & Writings",

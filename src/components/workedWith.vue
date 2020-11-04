@@ -1,5 +1,5 @@
 <template>
-<div class="shadow-inner">
+<div class="shadow-inne bg-gray-100">
   <div class="container mx-auto px-6 sm:px-15  py-20 ">
     <h2 class=" text-3xl font-bold text-gray-800 tracking-tight  capitalize">Some organisations I’ve worked with</h2>
 

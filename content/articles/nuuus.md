@@ -32,15 +32,18 @@ toc:
 For a long time, this was the mantra at the news department of the Belgian public broadcaster, VRT. But the media usage of youngsters had changed, and VRT Startup,  the department in charge of challenging the VRT’s daily processes, wasn’t convinced this adagio was still true. So, together with Hans Dreessen, my colleague UX designer, we prototyped and tested a news platform for youngsters.
 
 ## Step 1: Qualitative and desk Research
-
+</article-grid>
+<article-grid :start="2" :end="12" :prose="false">
 <image-inline>
     <g-image
       slot="image"
       class="w-auto"
-      src="~/images/nuuus/step1.png"
+      src="~/images/articles/nuuus/step1.png"
       alt="An scheme showing the timeline of the project. Highlighted is step 1: Qualitative and desk Research"
     />  
 </image-inline>
+</article-grid>
+<article-grid>
 <article-meta>
   <span slot="name">Duration</span>
   <span slot="content">1 month</span>
@@ -57,7 +60,7 @@ We talked to teenagers from 12 to 18, visiting 15 schools, from all over Flander
     <g-image
       slot="image"
       class="w-auto"
-      src="~/images/nuuus/image1.png"
+      src="~/images/articles/nuuus/image1.png"
       alt="A photo of some of the test users I interviewed"
     />  
     <span slot="caption">Some of the test users I interviewed</span>
@@ -66,16 +69,19 @@ We talked to teenagers from 12 to 18, visiting 15 schools, from all over Flander
 At the same time we read up on usage of (social) media with teenagers, mainly using the excellent “Apestaartjaren”, an organisation that researchers youngsters and their media usage.
 
 ## Step 2: Smoke Screen
-
+</article-grid>
+<article-grid :start="2" :end="12" :prose="false">
 <image-inline>
     <g-image
       slot="image"
       class="w-auto"
-      src="~/images/nuuus/step2.png"
+      src="~/images/articles/nuuus/step2.png"
       alt="An scheme showing the timeline of the project. Highlighted is step 2: Smoke Screen"
     />  
     <!-- <span slot="caption">Step 1: Qualitative and desk Research</span> -->
 </image-inline>
+</article-grid>
+<article-grid >
 <article-meta>
   <span slot="name">Duration</span>
   <span slot="content">2 weeks</span>
@@ -106,15 +112,18 @@ Because we needed the attention of a younger audience, we decided a video would 
 Watch out with “serial early adopters”. People who tend to sign up to anything that has a remote sense of being new. Nothing wrong with these people in general, they can become instrumental in a later stadium, but at this point they can skew your result. Keep your focus on your real target audience. Find a way to filter them out of the results.
 
 ### Step 3: Test Community
+</article-grid>
+<article-grid :start="2" :end="12" :prose="false">
 <image-inline>
     <g-image
       slot="image"
       class="w-auto"
-      src="~/images/nuuus/step3.png"
+      src="~/images/articles/nuuus/step3.png"
       alt="An scheme showing the timeline of the project. Highlighted is step 3: Test Community"
     />  
 </image-inline>
-
+</article-grid>
+<article-grid>
 <article-meta>
   <span slot="name">Duration</span>
   <span slot="content">2 months</span>
@@ -131,7 +140,7 @@ A few hundred people signed up through the beta test form on the smoke screen pa
     <g-image
       slot="image"
       class="w-auto"
-      src="~/images/nuuus/image2.png"
+      src="~/images/articles/nuuus/image2.png"
       alt="A screenshot of a Facebook Group, illustrating the community we created for a constant feedback loop."
     />  
     <span slot="caption">The community we created for a constant feedback loop.</span>
@@ -141,22 +150,28 @@ This screenshot is in dutch, sorry!
 
 We created small HTML articles with a preliminary design, on which we iterated daily. They looked crappy and the styling was very hectic, but at least we had something to push in their hands, and get feedback on. The articles were coded and typed directly in pens in Codepen, so we didn’t loose too much time on working out a CMS.
 
+</article-grid>
+<article-grid :start="2" :end="12" :prose="false">
 <iframe height="468" style="width: 100%;" scrolling="no" title="HARD Matras" src="https://codepen.io/pmcp/embed/Baolg?height=468&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/pmcp/pen/Baolg'>HARD Matras</a> by Maarten Lauwaert
   (<a href='https://codepen.io/pmcp'>@pmcp</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
+</article-grid>
+<article-grid >
 
 ## Step 4: Prototype
-
+</article-grid>
+<article-grid :start="2" :end="12" :prose="false">
 <image-inline>
     <g-image
       slot="image"
       class="w-auto"
-      src="~/images/nuuus/step4.png"
+      src="~/images/articles/nuuus/step4.png"
       alt="An scheme showing the timeline of the project. Highlighted is step 4: Prototype"
     />  
 </image-inline>
-
+</article-grid>
+<article-grid >
 <article-meta>
   <span slot="name">Duration</span>
   <span slot="content">4 x 2 weeks</span>
@@ -175,37 +190,40 @@ Once we had an idea what the articles would look like, what the writing style sh
       <g-image
         slot="image"
         class="w-auto"
-        src="~/images/nuuus/image3.gif"
+        src="~/images/articles/nuuus/image3.gif"
         alt="An animated image that shows an interactive module of the news app"
       />  
       <!-- <span slot="caption">The community we created for a constant feedback loop.</span> -->
   </image-inline>
 </article-grid>
-<article-grid :start="7" :end="11">
+<article-grid :start="7" :end="12">
 <image-inline>
     <g-image
       slot="image"
       class="w-auto"
-      src="~/images/nuuus/image4.gif"
+      src="~/images/articles/nuuus/image4.gif"
       alt="An animated image that shows an interactive module of the news app"
     />
     <!-- <span slot="caption">The community we created for a constant feedback loop.</span> -->
 </image-inline>
 </article-grid>
 <article-grid>
-After 4s sprints of each 2 weeks, we took a break, and analysed our results.
+After 4 sprints of each 2 weeks, we took a break, and analysed our results.
+<br>
 
 ## Step 5: MVP
-
+</article-grid>
+<article-grid :start="2" :end="12" :prose="false">
 <image-inline>
     <g-image
       slot="image"
       class="w-auto"
-      src="~/images/nuuus/step5.png"
+      src="~/images/articles/nuuus/step5.png"
       alt="An scheme showing the timeline of the project. Highlighted is step 5: MVP"
     />  
 </image-inline>
-
+</article-grid>
+<article-grid>
 
 <article-meta>
   <span slot="name">Duration</span>
@@ -225,7 +243,7 @@ Two features were very important for us, and our audience: push notifications an
     <g-image
       slot="image"
       class="w-auto"
-      src="~/images/nuuus/image5.png"
+      src="~/images/articles/nuuus/image5.png"
       alt="A screenshot of the application page in the iOS app store."
     />  
     <span slot="caption">The app in the iOS App Store</span>
@@ -240,14 +258,18 @@ We iterated on the app over the course of 4 months, mainly focussing on formats 
 
 ## Step 6: Analysis & learnings
 
+</article-grid>
+<article-grid :start="2" :end="12" :prose="false">
 <image-inline>
     <g-image
       slot="image"
       class="w-auto"
-      src="~/images/nuuus/step6.png"
+      src="~/images/articles/nuuus/step6.png"
       alt="An scheme showing the timeline of the project. Highlighted is step 6: Analysis & learnings"
     />  
 </image-inline>
+</article-grid>
+<article-grid>
 
 When the project was finished, we presented our results to the management boards. These findings where comprised of:
 
@@ -261,7 +283,7 @@ When the project was finished, we presented our results to the management boards
     <g-image
       slot="image"
       class="w-auto"
-      src="~/images/nuuus/image6.png"
+      src="~/images/articles/nuuus/image6.png"
       alt="A screenshot of a spreadsheet with feedback of the userss."
     />  
     <span slot="caption">We collected feedback in a spreadsheet for further reseach.</span>

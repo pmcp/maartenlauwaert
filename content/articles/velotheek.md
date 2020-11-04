@@ -43,7 +43,7 @@ But both communes realized quickly that the reservations of the bikes would beco
     <g-image
       slot="image"
       class="w-auto mx-auto"
-      src="~/images/velotheek/velotheek_excalidraw_step1.png"
+      src="~/images/articles/velotheek/velotheek_excalidraw_step1.png"
       alt="An scheme showing the timeline of the project. Highlighted is step 1: Research"
     />  
 </image-inline>
@@ -83,7 +83,7 @@ Every "persona" gets it's own "jobs to be done", mapping of needs and potential 
     <g-image
       slot="image"
       class="w-auto mx-auto"
-      src="~/images/velotheek/velotheek_excalidraw_step2.png"
+      src="~/images/articles/velotheek/velotheek_excalidraw_step2.png"
       alt="A scheme showing the timeline of the project. Highlighted is step 1: Research"
     />
 </image-inline>
@@ -113,7 +113,7 @@ This very low fidelity prototype gets shared with the the smallest group of stak
     <g-image
       slot="image"
       class="w-auto mx-auto"
-      src="~/images/velotheek/velotheek2.gif"
+      src="~/images/articles/velotheek/velotheek2.gif"
       alt="An animated image of an early prototype flow of the application"
     />  
     <span slot="caption">A very early prototype</span>
@@ -126,7 +126,7 @@ This very low fidelity prototype gets shared with the the smallest group of stak
     <g-image
       slot="image"
       class="w-auto mx-auto"
-      src="~/images/velotheek/velotheek4.png"
+      src="~/images/articles/velotheek/velotheek4.png"
       alt="A screenshot of the application: Figma, showing the low fidelity prototype."
     />  
     <span slot="caption">The overview of all "decision branches"</span>
@@ -145,7 +145,7 @@ This very low fidelity prototype gets shared with the the smallest group of stak
     <g-image
       slot="image"
       class="w-auto mx-auto"
-      src="~/images/velotheek/velotheek_excalidraw_step3.png"
+      src="~/images/articles/velotheek/velotheek_excalidraw_step3.png"
       alt="An scheme showing the timeline of the project. Highlighted is step 3: Wireframing"
     />  
 </image-inline>
@@ -170,7 +170,7 @@ Based on the decision tree, I created a wireframe. I always choose a basic desig
     <g-image
       slot="image"
       class="w-auto mx-auto"
-      src="~/images/velotheek/velotheek3.png"
+      src="~/images/articles/velotheek/velotheek3.png"
       alt="First wireframes made in Figma."
     />
     <span slot="caption">First wireframes made in Figma.</span>
@@ -185,7 +185,7 @@ Based on the decision tree, I created a wireframe. I always choose a basic desig
     <g-image
       slot="image"
       class="w-auto mx-auto"
-      src="~/images/velotheek/velotheek_excalidraw_step4.png"
+      src="~/images/articles/velotheek/velotheek_excalidraw_step4.png"
       alt="An scheme showing the timeline of the project. Highlighted is step 4: Click Prototype"
     />  
 </image-inline>
@@ -213,7 +213,7 @@ Once all the clicks and paths are in place, the app gets send to some users. In 
     <g-image
       slot="image"
       class="w-auto mx-auto"
-      src="~/images/velotheek/velotheek_excalidraw_step5.png"
+      src="~/images/articles/velotheek/velotheek_excalidraw_step5.png"
       alt="An scheme showing the timeline of the project. Highlighted is step 5: MVP"
     />  
 </image-inline>
@@ -240,7 +240,7 @@ In this case I designed the flow to reserve bikes for one specific day. The app 
     <g-image
       slot="image"
       class="w-auto mx-auto"
-      src="~/images/velotheek/velotheek4.png"
+      src="~/images/articles/velotheek/velotheek4.png"
       alt="Screenshot of a Trello board, with feedback of users"
     />
     <span slot="caption">The Trello board for the intake of feedback.</span>
@@ -257,7 +257,7 @@ In this case I designed the flow to reserve bikes for one specific day. The app 
     <g-image
       slot="image"
       class="w-auto mx-auto"
-      src="~/images/velotheek/velotheek_excalidraw_step5.png"
+      src="~/images/articles/velotheek/velotheek_excalidraw_step5.png"
       alt="An scheme showing the timeline of the project. Highlighted is step 6: Live Beta"
     />  
 </image-inline>
@@ -283,7 +283,7 @@ I use the lessons of phase 4 to iterate on the code and create a prototype that 
     <g-image
       slot="image"
       class="w-auto mx-auto"
-      src="~/images/velotheek/velotheek1.gif"
+      src="~/images/articles/velotheek/velotheek1.gif"
       alt="An animation of the Velotheek as it is being used right now."
     />
     <span slot="caption">The Velotheek as it is being used right now.</span>

@@ -13,6 +13,8 @@
           <span class="mt-0 mb-0">{{theCard.descr}}</span>
        
           <a
+        rel="noopener noreferrer"
+
             :href="theCard.url"
             target="_blank"
             v-if="theCard.url.length > 0 && urlInline"
@@ -51,6 +53,7 @@
         <slot></slot>
       </span>
       <a
+        rel="noopener noreferrer"
         :href="theCard.url"
         target="_blank"
         v-if="theCard.url.length > 0 && urlInline"

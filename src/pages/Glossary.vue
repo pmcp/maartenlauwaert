@@ -47,6 +47,8 @@
                 class=" text-xs italic pt-4"
               >
                 <a
+                        rel="noopener noreferrer"
+
                   :href="`https://twitter.com/${card.node.twitter}`"
                   target="_blank"
                   class="text-gray-400 hover:text-gray-500 transition hover:underline ease-in-out duration-150 flex flex-row "
@@ -81,6 +83,8 @@
                   />
                 </svg>
                 <a
+                        rel="noopener noreferrer"
+
                   :href="card.node.url"
                   target="_blank"
                   class="text-gray-400 hover:text-gray-500 transition ease-in-out duration-150 text-xs hover:underline"

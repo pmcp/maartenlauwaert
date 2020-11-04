@@ -19,6 +19,7 @@ pt-5
     >
       <a
         :href="`https://twitter.com/${card.twitter}`"
+        rel="noopener noreferrer"
         target="_blank"
         class="text-gray-400 hover:text-gray-500 transition hover:underline ease-in-out duration-150 flex flex-row "
       >
@@ -52,6 +53,7 @@ pt-5
         />
       </svg>
       <a
+        rel="noopener noreferrer"
         :href="card.url"
         target="_blank"
         class="  text-xs hover:underline"

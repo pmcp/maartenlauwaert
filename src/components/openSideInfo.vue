@@ -9,6 +9,8 @@
     <slot></slot>
     <a
       :href="url"
+              rel="noopener noreferrer"
+
       target="_blank"
     >
       <!-- Heroicon name: external-link -->

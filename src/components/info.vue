@@ -17,6 +17,8 @@
     >
     {{ '~/images/cards/'+l.node.cover }}
    <a
+           rel="noopener noreferrer"
+
         :href="l.node.url"
         target="_blank"
       >

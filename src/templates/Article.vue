@@ -5,7 +5,7 @@
       class="px-6 sm:px-15  container mx-auto my-15 sm:my-20 sm:pb-10 font-extrabold tracking-tight text-gray-900 text-3xl sm:text-5xl leading-snug sm:leading-tight"
     ></h1>
 
-    <div class="px-6 sm:px-15  flex flex-col sm:flex-row sm:pb-8 container mx-auto mb-28">
+    <div class="px-6 sm:px-15  flex flex-col sm:flex-row sm:pb-8 container mx-auto mb-28 overflow-hidden">
       <div
         class="w-full  mb-4 sm:mb-0  md:w-1/4"
         v-if="isTOCActive || isCardsActive"
@@ -60,11 +60,11 @@
       </div>
 
       <VueRemarkContent
-        class="flex-grow grid grid-cols-12 gap-8 ml-0 sm:ml-5"
+        class="flex-grow grid grid-cols-12 gap-0 md:gap-8 ml-0 sm:ml-5 "
         v-if="isTOCActive || isCardsActive"
       />
       <div v-else>
-        <VueRemarkContent class="flex-grow grid grid-cols-12 gap-8 " />
+        <VueRemarkContent class="flex-grow grid grid-cols-12 gap-0 md:gap-8 " />
       </div>
 
       <div

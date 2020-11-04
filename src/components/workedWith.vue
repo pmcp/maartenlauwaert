@@ -3,9 +3,17 @@
   <div class="container mx-auto px-6 sm:px-15  py-20 ">
     <h2 class=" text-3xl font-bold text-gray-800 tracking-tight  capitalize">Some organisations I’ve worked with</h2>
 
-    <ul class="flex flex-row flex-wrap items-center justify-between py-20">
+<!-- <div class="flex">
+  <div class="opacity-100 md:opacity-25">SM</div>
+  <div class="opacity-25 md:opacity-100 lg:opacity-25">MD</div>
+  <div class="opacity-25 lg:opacity-100 xl:opacity-25">LG</div>
+  <div class="opacity-25 xl:opacity-100 ">XL</div>
+</div> -->
+
+
+    <ul class="flex flex-row flex-wrap items-center justify-around md:justify-between py-20">
     <!-- <ul class="flex flex-row flex-no-wrap items-center "> -->
-      <li class="flex justify-center grayscale pr-8 ">
+      <li class="flex justify-center  grayscale items-center w-1/4 md:w-1/6 mr-2 md:mr-4 py-8">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 100 26"
@@ -33,7 +41,7 @@
 
   
 
-      <li class="flex justify-center  grayscale items-center  w-2/6">
+      <li class="flex justify-center  grayscale items-center w-1/2 md:w-2/6 mr-2 md:mr-4 py-4 md:py-8">
         <svg
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +80,7 @@
       </li>
    
 
-      <li class="flex justify-center grayscale items-center w-1/12 mr-8">
+      <li class="flex justify-center grayscale items-center w-1/6 md:w-1/12 mr-0 md:mr-4 py-4 md:py-8">
         <!-- <div class="col-span-2 flex justify-center md:col-span-3 lg:col-span-1 grayscale"> -->
         <svg
           width="100%"
@@ -139,7 +147,7 @@
         </svg>
       </li>
 
-      <li class="flex justify-center grayscale items-center w-1/12 mr-8">
+      <li class="flex justify-center grayscale items-center w-1/6 md:w-1/12 mr-2 md:mr-4 py-4 md:py-8">
         <svg
           width="100%"
           height="100%"
@@ -191,7 +199,7 @@
 
       </li>
 
-      <li class="flex justify-center grayscale items-center w-1/6 ">
+      <li class="flex justify-center grayscale items-center w-1/3 md:w-1/6 mr-w mr-2 md:mr-4 py-4 md:py-8">
         <svg
           width="100%"
           height="100%"
@@ -209,7 +217,7 @@
         </svg>
       </li>
 
-      <li class="flex justify-center  grayscale items-center py-5 pr-8 w-2/12 mt-8">
+      <li class="flex justify-center  grayscale items-center w-5/12 md:w-2/12 mt-0 md:mt-4 py-4 md:py-8">
         <svg
           focusable="false"
           tabindex="-1"
@@ -237,7 +245,7 @@
         </svg>
       </li>
 
-      <li class="flex justify-center grayscale items-center w-1/12  mr-8">
+      <li class="flex justify-center grayscale items-center w-2/12 md:w-1/12 mr-2 md:mr-2 py-4 md:py-8">
         <g-image
           slot="image"
           class="w-full"
@@ -246,7 +254,7 @@
         />
       </li>
 
-   <li class="flex justify-center grayscale items-center mr-8 w-1/12 my-4">
+      <li class="flex justify-center grayscale items-center w-2/12 md:w-1/12 mr-2 md:mr-2 py-4 md:py-8">
         <svg
           width="100%"
           height="100%"
@@ -295,7 +303,7 @@
         </svg>
       </li>
       
-      <li class="flex justify-center grayscale items-center w-1/6  mr-8">
+      <li class="flex justify-center grayscale items-center w-4/12 md:w-1/6  mr-2 md:mr-4 py-4 md:py-8">
         <svg
           width="100%"
           height="100%"
@@ -383,7 +391,7 @@
         </svg>
       </li>
 
-    <li class="flex justify-center  grayscale items-center pr-8 w-3/12">
+      <li class="flex justify-center  grayscale items-center w-5/12 md:w-3/12 mr-0 md:mr-8 py-4 md:py-8">
 
         <g-image
           slot="image"
@@ -394,7 +402,7 @@
 
       </li>
 
-      <li class="flex justify-center grayscale items-center w-1/6  ">
+      <li class="flex justify-center grayscale items-center w-4/12 md:w-1/6   py-4 md:py-8">
 
         <svg
           version="1.1"

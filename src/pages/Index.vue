@@ -3,6 +3,7 @@
     <intro></intro>
     <hero></hero>
     <how-i-work></how-i-work>
+    <worked-with></worked-with>
     <cases :cases="$page.allArticle.edges"></cases>
   </Layout>
 </template>
@@ -27,6 +28,7 @@
 import intro from "~/components/intro.vue";
 import hero from "~/components/hero.vue";
 import howIWork from "~/components/howIWork.vue";
+import workedWith from "~/components/workedWith.vue";
 import cases from "~/components/cases.vue";
 
 export default {

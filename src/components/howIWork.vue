@@ -68,7 +68,7 @@
           </h3>
 
           <div
-            v-for="(card, id) in $static.allCard.edges"
+            v-for="(card, id) in filteredCards"
             :key="id"
           >
             <card
@@ -119,6 +119,12 @@ export default {
   components: {
     card,
     // cardInline,
+  },
+  computed: {
+    filteredCards() {
+      const cardsInContent = ['johnCarmack'];
+      return this.$static.allCard.edges.filter(card => (cardsInContent.indexOf(card.node.id) != -1))
+    }
   },
   methods: {
     // handleScroll: function (evt, el) {

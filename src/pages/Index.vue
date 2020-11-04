@@ -2,6 +2,7 @@
   <Layout>
     <intro></intro>
     <hero></hero>
+    
     <how-i-work></how-i-work>
     <worked-with></worked-with>
     <cases :cases="$page.allArticle.edges"></cases>
@@ -36,6 +37,7 @@ export default {
     intro,
     hero,
     howIWork,
+    workedWith,
     cases,
   },
   metaInfo: {

@@ -50,8 +50,24 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 100%;
-	}
+    height: 100%;
+  }
+  
+  /* Grayscale images */
+  .grayscale {
+    filter: grayscale(100%);
+    opacity: .7;
+    transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter, opacity;
+    transition-duration: 1s;
+  }
+
+  .grayscale:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter, opacity;
+    transition-duration: .5s;
+  }
+
 
 
   /* Detail / Summary  */

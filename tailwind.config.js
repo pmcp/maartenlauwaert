@@ -29,7 +29,9 @@ module.exports = {
     },
     extend: {
       colors: {
-        'accent': '#00FFA3',
+        // 'accent': '#00FFA3',
+        'accent': '00C6BA'
+        // 'accent-alt': '#00C6BA'
       },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],

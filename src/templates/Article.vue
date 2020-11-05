@@ -10,17 +10,18 @@
         class="w-full  mb-4 sm:mb-0  md:w-1/4"
         v-if="isTOCActive || isCardsActive"
       >
-        <div class="sticky top-5 ">
-          <div class="h-auto sm:h-screen overflow-y-scroll ">
+        <div class="sticky top-12 ">
+          <!-- <div class="h-auto sm:h-screen overflow-y-auto"> -->
+            <div class="h-auto sm:h-screen "> <!-- TODO: Find a fix for removing of overflow-y-auto-->
             <scrollactive
               active-class="animated-underline--active"
               v-if="isTOCActive"
             >
-              <div class="border-solid border-2 border-gray-500 rounded p-2 mb-5 shadow-lg ">
+              <div class="border-solid border-2 border-gray-500 rounded p-2 mb-5 shadow-lg colorfulborders ">
                 <h3 class="text-2xl sm:text-xl font-bold text-gray-800 sm:text-gray-600 tracking-tight py-5 sm:py-3 ">
                   Chapters
                 </h3>
-                <ul class="sticky top-0 text-sm leading-loose text-gray-500 capitalize list-none pb-4 sm:pb-0 mb-4">
+                <ul class="text-sm leading-loose text-gray-500 capitalize list-none pb-4 sm:pb-0 mb-4">
 
                   <li
                     v-for="(i,id) in $page.article.toc"
@@ -37,10 +38,10 @@
               </div>
             </scrollactive>
             <div
-              class="leading-loose hidden sm:block border-solid border-2 border-gray-500 shadow-lg rounded p-2 pb-5 "
+              class="leading-loose hidden sm:block border-solid border-2 border-gray-500 shadow-lg rounded p-2 pb-5 sm:mt-5"
               v-if="isCardsActive"
             >
-              <h3 class="text-xl font-bold text-gray-800 sm:text-gray-600 tracking-tight ">
+              <h3 class="text-xl font-bold text-gray-800 sm:text-gray-600 tracking-tight  ">
                 Glossary
               </h3>
               <div

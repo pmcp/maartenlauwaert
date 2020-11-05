@@ -7,7 +7,7 @@
       I help organisations define and decide the next steps for their product or service. I do this by designing wireframes, performing user tests or rapidly creating prototypes.
     </h2>
     
-    <doodle-coffee class="absolute w-1/2 sm:w-1/3 right-0 sm:right-0 lg:top-20"></doodle-coffee>
+    <doodle-coffee class="absolute w-1/2 sm:w-1/3 right-0 sm:right-0 sm:bottom-10 lg:top-20"></doodle-coffee>
   </div>
 </template>
 

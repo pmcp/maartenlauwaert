@@ -17,7 +17,7 @@
               active-class="animated-underline--active"
               v-if="isTOCActive"
             >
-              <div class="border-solid border-2 border-gray-500 rounded p-2 mb-5 shadow-lg colorfulborders ">
+              <div class="border-solid border-2 border-gray-500 rounded p-2 mb-5 shadow-lg borders-colorful ">
                 <h3 class="text-2xl sm:text-xl font-bold text-gray-800 sm:text-gray-600 tracking-tight py-5 sm:py-3 ">
                   Chapters
                 </h3>

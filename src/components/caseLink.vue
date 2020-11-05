@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-between h-full border-solid border-2 border-gray-500 p-6 shadow-xl rounded">
+  <div class="flex flex-col justify-between h-full border-solid border-2 border-gray-500 p-6 shadow-xl rounded whiteborders">
 
     <g-link
       :to="`/articles/${content.meta.slug}`"

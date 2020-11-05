@@ -173,6 +173,80 @@
     }
   }
 
+
+
+  .whiteborders {
+    border: 1px solid theme('colors.white');
+    padding: 15px;
+    margin: 50px auto 0 auto;
+    box-shadow: -10px -10px 0 -1px theme('colors.gray.800'), -10px -10px #FFF,
+          -20px -20px 0 -1px theme('colors.gray.800'), -20px -20px #FFF,
+          -30px -30px 0 -1px theme('colors.gray.800'), -30px -30px #FFF,
+          -40px -40px 0 -1px theme('colors.gray.800'), -40px -40px #FFF;
+  }
+  
+  .whiteborders:hover {
+    animation: shadow-wave-white 0.8s ease forwards;
+  }
+  
+  @keyframes shadow-wave-white {
+    0% {
+      box-shadow: -10px -10px 0 -1px theme('colors.gray.800'), -10px -10px 0 0px #FFF,
+        -20px -20px 0 -1px theme('colors.gray.800'), -20px -20px 0 0px #FFF,
+        -30px -30px 0 -1px theme('colors.gray.800'), -30px -30px 0 0px #FFF,
+        -40px -40px 0 -1px theme('colors.gray.800'), -40px -40px 0 0px #FFF;
+    }
+    12.5% {
+      box-shadow: -10px -30px 0 -1px theme('colors.gray.800'), -10px -30px 0 0px #FFF,
+        -20px -20px 0 -1px theme('colors.gray.800'), -20px -20px 0 0px #FFF,
+        -30px -30px 0 -1px theme('colors.gray.800'), -30px -30px 0 0px #FFF,
+        -40px -40px 0 -1px theme('colors.gray.800'), -40px -40px 0 0px #FFF;
+    }
+    25% {
+      box-shadow: -10px -20px 0 -1px theme('colors.gray.800'), -10px -20px 0 0px #FFF,
+        -20px -40px 0 -1px theme('colors.gray.800'), -20px -40px 0 0px #FFF,
+        -30px -30px 0 -1px theme('colors.gray.800'), -30px -30px 0 0px #FFF,
+        -40px -40px 0 -1px theme('colors.gray.800'), -40px -40px 0 0px #FFF;
+    }
+    37.5% {
+      box-shadow: -10px 0px 0 -1px theme('colors.gray.800'), -10px 0px 0 0px #FFF,
+        -20px -30px 0 -1px theme('colors.gray.800'), -20px -30px 0 0px #FFF,
+        -30px -50px 0 -1px theme('colors.gray.800'), -30px -50px 0 0px #FFF,
+        -40px -40px 0 -1px theme('colors.gray.800'), -40px -40px 0 0px #FFF;
+    }
+    50% {
+      box-shadow: -10px -10px 0 -1px theme('colors.gray.800'), -10px -10px 0 0px #FFF,
+        -20px -10px 0 -1px theme('colors.gray.800'), -20px -10px 0 0px #FFF,
+        -30px -40px 0 -1px theme('colors.gray.800'), -30px -40px 0 0px #FFF,
+        -40px -60px 0 -1px theme('colors.gray.800'), -40px -60px 0 0px #FFF;
+    }
+    62.5% {
+      box-shadow: -10px -10px 0 -1px theme('colors.gray.800'), -10px -10px 0 0px #FFF,
+        -20px -20px 0 -1px theme('colors.gray.800'), -20px -20px 0 0px #FFF,
+        -30px -20px 0 -1px theme('colors.gray.800'), -30px -20px 0 0px #FFF,
+        -40px -50px 0 -1px theme('colors.gray.800'), -40px -50px 0 0px #FFF;
+    }
+    75% {
+      box-shadow: -10px -10px 0 -1px theme('colors.gray.800'), -10px -10px 0 0px #FFF,
+        -20px -20px 0 -1px theme('colors.gray.800'), -20px -20px 0 0px #FFF,
+        -30px -30px 0 -1px theme('colors.gray.800'), -30px -30px 0 0px #FFF,
+        -40px -40px 0 -1px theme('colors.gray.800'), -40px -40px 0 0px #FFF;
+    }
+    87.5%% {
+      box-shadow: -10px -10px 0 -1px theme('colors.gray.800'), -10px -10px 0 0px #FFF,
+        -20px -20px 0 -1px theme('colors.gray.800'), -20px -20px 0 0px #FFF,
+        -30px -30px 0 -1px theme('colors.gray.800'), -30px -30px 0 0px #FFF,
+        -40px -30px 0 -1px theme('colors.gray.800'), -40px -30px 0 0px #FFF;
+    }
+    100% {
+      box-shadow: -10px -10px 0 -1px theme('colors.gray.800'), -10px -10px 0 0px #FFF,
+        -20px -20px 0 -1px theme('colors.gray.800'), -20px -20px 0 0px #FFF,
+        -30px -30px 0 -1px theme('colors.gray.800'), -30px -30px 0 0px #FFF,
+        -40px -40px 0 -1px theme('colors.gray.800'), -40px -40px 0 0px #FFF;
+    }
+  }
+
+
   
 
 }

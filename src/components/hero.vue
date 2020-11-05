@@ -1,5 +1,5 @@
 <template>
-<div class=" ">
+<div class="bg-accent py-20">
     <div class="container mx-auto px-6 py-15 sm:p-15 sm:py-20 borders-gray rounded ">
     <h2 class="text-3xl font-bold text-gray-800 tracking-tight pb-7 capitalize pt-10">What I can do for you</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 ">

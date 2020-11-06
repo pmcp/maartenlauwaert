@@ -1,6 +1,7 @@
 <template>
   <Layout>
     <div class=" bg-white">
+      
       <h1
         v-html="$page.page.title"
         class="px-6 sm:px-15 container mx-auto mt-2 mb-6 sm:mb-14 font-extrabold tracking-tight text-gray-900 text-3xl sm:text-5xl leading-snug sm:leading-tight"
@@ -128,6 +129,9 @@ query ($id: ID!) {
       name
       id
     }
+    meta {
+      summary
+    }
   }
 }
 </page-query>
@@ -141,10 +145,12 @@ import { EventBus } from "~/eventBus.js";
 export default {
   metaInfo() {
     return {
-      title: this.$page.page.title,
-      //   meta: [
-      //     { name: "description", content: this.$page.post.excerpt }
-      //  ]
+      title: 'Maarten Lauwaert - ' + this.$page.page.title,
+        meta: [
+          { name: "description", content: this.$page.page.meta.summary },
+          { name: 'author', content: 'Maarten Lauwaert' },
+          // { property: "og:image", content: this.$static.metadata.siteUrl + 'my-beautiful-image.jpg' },
+       ]
     };
   },
   data() {

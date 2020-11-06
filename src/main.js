@@ -32,6 +32,14 @@ export default function (Vue, { router, head, isClient }) {
 
 
 
+  // global Meta Tags
+  head.meta.push({
+    name: 'keywords',
+    content: 'Maarten Lauwaert,UX,UX Expert,User Experience,User Testing,usertesting,accessibility,a11y,creative coding,Prototyping,service design,Vue,HTML,CSS,JavaScript,JS,'
+    
+  },
+  { name: "description", content: 'Maarten Lauawert, UX designer, creative coder' },)
+
 
 
   // // Scroll Directive (https://vuejs.org/v2/cookbook/creating-custom-scroll-directives.html)

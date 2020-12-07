@@ -61,7 +61,7 @@ module.exports = {
           // useful if you're running a self-hosted fathom instance
           // trackerUrl: 'your-custom-url',
           // declare this to ensure your tracking only occurs on a single host
-          host: 'maartenlauwaert.eu',
+          // host: 'maartenlauwaert.eu',
           // set to true for local debugging; defaults to false
           debug: false
         }

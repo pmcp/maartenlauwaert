@@ -54,6 +54,18 @@ module.exports = {
         template: './src/templates/Card.vue' // Optional
       }
     },
+    {
+      use: 'gridsome-plugin-fathom',
+        options: {
+          siteId: 'VCSIDLSE',
+          // useful if you're running a self-hosted fathom instance
+          // trackerUrl: 'your-custom-url',
+          // declare this to ensure your tracking only occurs on a single host
+          host: 'maartenlauwaert.eu',
+          // set to true for local debugging; defaults to false
+          debug: false
+        }
+      }
   ],
   // This makes dynamic images work
   chainWebpack: config => {
